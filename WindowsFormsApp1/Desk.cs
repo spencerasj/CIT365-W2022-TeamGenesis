@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MegaDesk2
+{
+    enum DesktopMaterial{ Oak, Laminate, Pine, Rosewood, Veneer };
+    public class Desk
+    {
+        public static int MAXWIDTH = 96;
+        public static int MINWIDTH = 24;
+        public static int MAXDEPTH = 48;
+        public static int MINDEPTH = 12;
+        public static int MINDRAWERS = 0;
+        public static int MAXDRAWERS = 7;
+
+        private int width;
+        private int depth;
+        private int numberOfDrawers;
+        private string surfaceMaterial;
+        
+        public Desk(int width, int depth, int numberOfDrawers, string surfaceMaterial)
+        {
+            this.width = width;
+            this.depth = depth;
+            this.numberOfDrawers = numberOfDrawers;
+            this.surfaceMaterial = surfaceMaterial;
+        }
+        public int Width
+        {
+            get { return width; }
+            set { 
+                if (MINWIDTH <= value && MAXWIDTH >= value) { 
+                    width = value;
+                }
+                else
+                {
+                    throw (new Exception("Number cannot be less than "+MINWIDTH+" or greater than "+MAXWIDTH));
+                } 
+            }
+        }
+        public int Depth
+        {
+            get { return depth; }
+            set {
+                if (MINDEPTH <= value && MAXDEPTH >= value)
+                {
+                    depth = value;
+                }
+                else
+                {
+                    throw (new Exception("Number cannot be less than " + MINDEPTH + " or greater than " + MAXDEPTH));
+                }
+            }
+        }
+        public int NumberOfDrawers
+        {
+            get { return numberOfDrawers; }
+            set
+            {
+                if (MINDRAWERS <= value && MAXDRAWERS >= value)
+                {
+                    numberOfDrawers = value;
+                }
+                else
+                {
+                    throw (new Exception("Number cannot be less than " + MINDRAWERS + " or greater than " + MAXDRAWERS));
+                }
+            }
+        }
+        public string SurfaceMaterial
+        {
+            get { return surfaceMaterial; }
+            set { surfaceMaterial = value; }
+        }
+
+    }
+}

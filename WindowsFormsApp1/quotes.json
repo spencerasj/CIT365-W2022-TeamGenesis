@@ -1,0 +1,24 @@
+[
+  {
+    "CustomerName": "Cayla",
+    "RushDays": 5,
+    "QuoteDate": "2022-01-29T00:09:06.0217636-05:00",
+    "Desk": {
+      "Width": 34,
+      "Depth": 43,
+      "NumberOfDrawers": 3,
+      "SurfaceMaterial": "Rosewood "
+    }
+  },
+  {
+    "CustomerName": "bob",
+    "RushDays": 7,
+    "QuoteDate": "2022-01-29T00:08:52.9518085-05:00",
+    "Desk": {
+      "Width": 33,
+      "Depth": 44,
+      "NumberOfDrawers": 5,
+      "SurfaceMaterial": "Veneer"
+    }
+  }
+]
