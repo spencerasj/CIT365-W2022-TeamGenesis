@@ -19,7 +19,7 @@ namespace MegaDesk2
             InitializeComponent();
             textDeskDepth.Text = deskQuote.Desk.Depth.ToString() +" inches";
             textDeskWidth.Text = deskQuote.Desk.Width.ToString() + " inches";
-            textDesktopMaterial.Text = deskQuote.Desk.SurfaceMaterial;
+            textDesktopMaterial.Text = deskQuote.Desk.SurfaceMaterial.ToString();
             textNumberOfDrawers.Text = deskQuote.Desk.NumberOfDrawers.ToString();
             textDeskQuote.Text = "$"+deskQuote.deskQuoteTotal().ToString();
             date.Text = deskQuote.QuoteDate.ToString("MMMM dd, yyyy");

@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace MegaDesk2
 {
-    enum DesktopMaterial{ Oak, Laminate, Pine, Rosewood, Veneer };
+    //enum DesktopMaterial{ Oak, Laminate, Pine, Rosewood, Veneer };
+    public enum DesktopMaterial
+    {
+        Laminate = 100,
+        Oak = 200,
+        Rosewood = 300,
+        Veneer = 125,
+        Pine = 50
+    }
     public class Desk
     {
         public static int MAXWIDTH = 96;
@@ -19,9 +27,9 @@ namespace MegaDesk2
         private int width;
         private int depth;
         private int numberOfDrawers;
-        private string surfaceMaterial;
+        private DesktopMaterial surfaceMaterial;
         
-        public Desk(int width, int depth, int numberOfDrawers, string surfaceMaterial)
+        public Desk(int width, int depth, int numberOfDrawers, DesktopMaterial surfaceMaterial)
         {
             this.width = width;
             this.depth = depth;
@@ -70,7 +78,7 @@ namespace MegaDesk2
                 }
             }
         }
-        public string SurfaceMaterial
+        public DesktopMaterial SurfaceMaterial
         {
             get { return surfaceMaterial; }
             set { surfaceMaterial = value; }

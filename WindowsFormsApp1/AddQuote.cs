@@ -19,10 +19,24 @@ namespace MegaDesk2
         {
             InitializeComponent();
             //desktopMaterialDropDown.DataSource = Enum.GetValues(typeof(DesktopMaterial));
+            InitSurfaceMaterials();
         }
-        
- 
-        private void addQuote(object sender, EventArgs e)
+
+        private void InitSurfaceMaterials()
+        {
+            List<KeyValuePair<string, string>> surfaces = new List<KeyValuePair<string, string>>();
+            //List<DesktopMaterial> surfaces = new List<DesktopMaterial>();
+            Array materials = Enum.GetValues(typeof(DesktopMaterial));
+            foreach (DesktopMaterial material in materials)
+            {
+            //    surfaces.Add(material);
+             surfaces.Add(new KeyValuePair<string, string>(material.ToString(), ((int)material).ToString()));
+            }
+            desktopMaterialDropDown.DataSource = surfaces;
+            desktopMaterialDropDown.DisplayMember = "Key";
+            desktopMaterialDropDown.ValueMember = "Value";
+        }
+            private void addQuote(object sender, EventArgs e)
         {
             //Before setting variables and going to next form make sure that the feilds are not empty
             if(!(textDeskWidth.Text == "" || textDeskDepth.Text == "" || textNumberOfDrawers.Text == "" || textName.Text== "" || rushOrderDropDown.SelectedItem == null || desktopMaterialDropDown.SelectedItem == null))
@@ -34,7 +48,9 @@ namespace MegaDesk2
                 int width = Int32.Parse(textDeskWidth.Text);
                 int depth = Int32.Parse(textDeskDepth.Text);
                 int numberOfDrawers = Int32.Parse(textNumberOfDrawers.Text);
-                string surfaceType = desktopMaterialDropDown.SelectedItem as String;
+                //DesktopMaterial surfaceType = (DesktopMaterial)desktopMaterialDropDown.SelectedItem;
+                DesktopMaterial surfaceType = (DesktopMaterial)Enum.Parse(typeof(DesktopMaterial),
+                    desktopMaterialDropDown.SelectedValue.ToString());
                 deskQuote.CustomerName = textName.Text;
                 deskQuote.RushDays = Int32.Parse(rushOrderDropDown.SelectedItem as String);
 

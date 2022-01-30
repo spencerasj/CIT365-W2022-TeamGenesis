@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::MegaDesk2.Properties.Resources.damian_zaleski_RYyr_k3Ysqg_unsplash1;
+//            this.BackgroundImage = global::MegaDesk2.Properties.Resources.damian_zaleski_RYyr_k3Ysqg_unsplash1;
             this.ClientSize = new System.Drawing.Size(633, 319);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.label6);
