@@ -53,9 +53,10 @@
             this.addQuoteButton.BackColor = System.Drawing.Color.Navy;
             this.addQuoteButton.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
             this.addQuoteButton.ForeColor = System.Drawing.Color.Snow;
-            this.addQuoteButton.Location = new System.Drawing.Point(297, 264);
+            this.addQuoteButton.Location = new System.Drawing.Point(792, 630);
+            this.addQuoteButton.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.addQuoteButton.Name = "addQuoteButton";
-            this.addQuoteButton.Size = new System.Drawing.Size(231, 38);
+            this.addQuoteButton.Size = new System.Drawing.Size(616, 91);
             this.addQuoteButton.TabIndex = 0;
             this.addQuoteButton.Text = "Add Quote";
             this.addQuoteButton.UseVisualStyleBackColor = false;
@@ -63,9 +64,10 @@
             // 
             // textName
             // 
-            this.textName.Location = new System.Drawing.Point(407, 51);
+            this.textName.Location = new System.Drawing.Point(1085, 122);
+            this.textName.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(121, 20);
+            this.textName.Size = new System.Drawing.Size(316, 38);
             this.textName.TabIndex = 1;
             // 
             // label1
@@ -74,17 +76,19 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(342, 48);
+            this.label1.Location = new System.Drawing.Point(912, 114);
+            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.Size = new System.Drawing.Size(135, 48);
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
             // 
             // textDeskWidth
             // 
-            this.textDeskWidth.Location = new System.Drawing.Point(407, 83);
+            this.textDeskWidth.Location = new System.Drawing.Point(1085, 198);
+            this.textDeskWidth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textDeskWidth.Name = "textDeskWidth";
-            this.textDeskWidth.Size = new System.Drawing.Size(121, 20);
+            this.textDeskWidth.Size = new System.Drawing.Size(316, 38);
             this.textDeskWidth.TabIndex = 3;
             this.textDeskWidth.Validating += new System.ComponentModel.CancelEventHandler(this.checkWidthValue);
             // 
@@ -93,9 +97,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(255, 83);
+            this.label2.Location = new System.Drawing.Point(680, 198);
+            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 20);
+            this.label2.Size = new System.Drawing.Size(330, 48);
             this.label2.TabIndex = 4;
             this.label2.Text = "Desk Width (in)";
             // 
@@ -104,17 +109,19 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(255, 117);
+            this.label3.Location = new System.Drawing.Point(680, 279);
+            this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 20);
+            this.label3.Size = new System.Drawing.Size(336, 48);
             this.label3.TabIndex = 6;
             this.label3.Text = "Desk Depth (in)";
             // 
             // textDeskDepth
             // 
-            this.textDeskDepth.Location = new System.Drawing.Point(407, 117);
+            this.textDeskDepth.Location = new System.Drawing.Point(1085, 279);
+            this.textDeskDepth.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textDeskDepth.Name = "textDeskDepth";
-            this.textDeskDepth.Size = new System.Drawing.Size(121, 20);
+            this.textDeskDepth.Size = new System.Drawing.Size(316, 38);
             this.textDeskDepth.TabIndex = 5;
             this.textDeskDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkDepthValue);
             // 
@@ -123,17 +130,19 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(217, 154);
+            this.label4.Location = new System.Drawing.Point(579, 367);
+            this.label4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(184, 20);
+            this.label4.Size = new System.Drawing.Size(421, 48);
             this.label4.TabIndex = 8;
             this.label4.Text = "Number Of Drawers";
             // 
             // textNumberOfDrawers
             // 
-            this.textNumberOfDrawers.Location = new System.Drawing.Point(407, 154);
+            this.textNumberOfDrawers.Location = new System.Drawing.Point(1085, 367);
+            this.textNumberOfDrawers.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.textNumberOfDrawers.Name = "textNumberOfDrawers";
-            this.textNumberOfDrawers.Size = new System.Drawing.Size(121, 20);
+            this.textNumberOfDrawers.Size = new System.Drawing.Size(316, 38);
             this.textNumberOfDrawers.TabIndex = 7;
             this.textNumberOfDrawers.Validating += new System.ComponentModel.CancelEventHandler(this.checkDrawerValue);
             // 
@@ -147,9 +156,10 @@
             "Pine ",
             "Rosewood ",
             "Veneer"});
-            this.desktopMaterialDropDown.Location = new System.Drawing.Point(407, 190);
+            this.desktopMaterialDropDown.Location = new System.Drawing.Point(1085, 453);
+            this.desktopMaterialDropDown.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.desktopMaterialDropDown.Name = "desktopMaterialDropDown";
-            this.desktopMaterialDropDown.Size = new System.Drawing.Size(121, 21);
+            this.desktopMaterialDropDown.Size = new System.Drawing.Size(316, 39);
             this.desktopMaterialDropDown.TabIndex = 9;
             // 
             // label5
@@ -157,9 +167,10 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(238, 190);
+            this.label5.Location = new System.Drawing.Point(635, 453);
+            this.label5.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 20);
+            this.label5.Size = new System.Drawing.Size(364, 48);
             this.label5.TabIndex = 10;
             this.label5.Text = "Desktop Material";
             // 
@@ -172,9 +183,10 @@
             "3 ",
             "5 ",
             "7 "});
-            this.rushOrderDropDown.Location = new System.Drawing.Point(407, 227);
+            this.rushOrderDropDown.Location = new System.Drawing.Point(1085, 541);
+            this.rushOrderDropDown.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.rushOrderDropDown.Name = "rushOrderDropDown";
-            this.rushOrderDropDown.Size = new System.Drawing.Size(121, 21);
+            this.rushOrderDropDown.Size = new System.Drawing.Size(316, 39);
             this.rushOrderDropDown.TabIndex = 11;
             // 
             // label6
@@ -182,9 +194,10 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(282, 227);
+            this.label6.Location = new System.Drawing.Point(752, 541);
+            this.label6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 20);
+            this.label6.Size = new System.Drawing.Size(266, 48);
             this.label6.TabIndex = 12;
             this.label6.Text = "Rush Order?";
             // 
@@ -198,19 +211,19 @@
             this.labelError.BackColor = System.Drawing.Color.Transparent;
             this.labelError.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Maroon;
-            this.labelError.Location = new System.Drawing.Point(403, 20);
+            this.labelError.Location = new System.Drawing.Point(1075, 48);
+            this.labelError.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(204, 20);
+            this.labelError.Size = new System.Drawing.Size(457, 48);
             this.labelError.TabIndex = 14;
-            this.labelError.Text = "Please fill in all feilds";
+            this.labelError.Text = "Please fill in all fields";
             this.labelError.Visible = false;
             // 
             // AddQuote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-//            this.BackgroundImage = global::MegaDesk2.Properties.Resources.damian_zaleski_RYyr_k3Ysqg_unsplash1;
-            this.ClientSize = new System.Drawing.Size(633, 319);
+            this.ClientSize = new System.Drawing.Size(1688, 761);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.rushOrderDropDown);
@@ -225,6 +238,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textName);
             this.Controls.Add(this.addQuoteButton);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "AddQuote";
             this.Text = "Add Quote";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
