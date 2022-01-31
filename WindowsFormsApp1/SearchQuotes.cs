@@ -15,6 +15,20 @@ namespace MegaDesk2
         public SearchQuotes()
         {
             InitializeComponent();
+            InitSurfaceMaterials();
+        }
+
+        private void InitSurfaceMaterials()
+        {
+            List<KeyValuePair<string, string>> surfaces = new List<KeyValuePair<string, string>>();
+            Array materials = Enum.GetValues(typeof(DesktopMaterial));
+            foreach (DesktopMaterial material in materials)
+            {
+                surfaces.Add(new KeyValuePair<string, string>(material.ToString(), ((int)material).ToString()));
+            }
+            comboBox1.DataSource = surfaces;
+            comboBox1.DisplayMember = "Key";
+            comboBox1.ValueMember = "Value";
         }
 
         private void goBackToMain(object sender, EventArgs e)
