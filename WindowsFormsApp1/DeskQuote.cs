@@ -147,6 +147,7 @@ namespace MegaDesk2
             }
             return additionalRushOrderCost;
         }
+
         public int deskQuoteTotal()
         {
             int price = 200;

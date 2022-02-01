@@ -116,7 +116,7 @@ namespace MegaDesk2
         }
 
         //
-        //Some of the error handling in here needs to be tweaked. numbers outside MIN and MAX are not grabbed.
+        //Some of the error handling in here needs to be tweaked. not picking up TAB press. Tried moving up in logic, but nothing happens when debugging.
         //Very messy but makes it so only a number, tab, backspace, and enter can be pressed. Then checks values if tab or enter are hit
         private void checkDepthValue(object sender, KeyPressEventArgs e)
         {
@@ -131,22 +131,23 @@ namespace MegaDesk2
             else if(e.KeyChar == (Char)Keys.Back){
                 e.Handled = false;
             }
-            else if (e.KeyChar == (Char)Keys.Return || e.KeyChar == (Char)Keys.Tab)
+            // Added in Enter key because wasn't picking up.
+            else if (e.KeyChar == (Char)Keys.Return || e.KeyChar == (Char)Keys.Tab || e.KeyChar == (Char)Keys.Enter)
             {
                 e.Handled = false;
                 try
                 {
-                    int depth =Int32.Parse(textDeskDepth.Text);
-                    checkCorrectValue(depth,Desk.MINDEPTH,Desk.MAXDEPTH,textDeskDepth);
+                    int depth = Int32.Parse(textDeskDepth.Text);
+                    checkCorrectValue(depth, Desk.MINDEPTH, Desk.MAXDEPTH, textDeskDepth);
                 }
-                catch 
+                catch
                 {
                     addQuoteButton.Click -= addQuote;
                     //textDeskDepth.Focus();
                     //errorProvider.SetError(textDeskDepth, "Please enter a number");
                     deskDepthErr.Text = "Please enter a number";
                 }
-               
+
             }
             else
             {

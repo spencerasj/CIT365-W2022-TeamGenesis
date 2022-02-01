@@ -28,184 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textDeskWidth = new System.Windows.Forms.Label();
-            this.textDeskDepth = new System.Windows.Forms.Label();
-            this.textNumberOfDrawers = new System.Windows.Forms.Label();
-            this.textDesktopMaterial = new System.Windows.Forms.Label();
-            this.textRushOrder = new System.Windows.Forms.Label();
-            this.textDeskQuote = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.customerLabel = new System.Windows.Forms.Label();
+            this.quoteLabel = new System.Windows.Forms.Label();
+            this.deskBasePriceLabel = new System.Windows.Forms.Label();
+            this.deskBaseCostLabel = new System.Windows.Forms.Label();
+            this.totalSqInLabel = new System.Windows.Forms.Label();
+            this.SqInSurchargeLabel = new System.Windows.Forms.Label();
+            this.surfaceAreaLabel = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.totalDrawerCostLabel = new System.Windows.Forms.Label();
+            this.totalDrawersLabel = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.surfaceMaterialChargeLabel = new System.Windows.Forms.Label();
+            this.surfaceMaterialLabel = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.orderSpeedCostLabel = new System.Windows.Forms.Label();
+            this.orderSpeedLabel = new System.Windows.Forms.Label();
+            this.deskTotalLabel = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(195, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Desk Quote Total:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(194, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Desk Specifications:";
             // 
             // date
             // 
-            this.date.AutoSize = true;
             this.date.BackColor = System.Drawing.Color.Transparent;
             this.date.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.date.Location = new System.Drawing.Point(300, 35);
+            this.date.Location = new System.Drawing.Point(411, 52);
             this.date.Name = "date";
             this.date.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.date.Size = new System.Drawing.Size(42, 17);
+            this.date.Size = new System.Drawing.Size(250, 17);
             this.date.TabIndex = 2;
             this.date.Text = "date";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(216, 284);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 17);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Rush Order:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(216, 257);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(144, 17);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Desktop Material:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(216, 231);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 17);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Number Of Drawers:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(216, 205);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 17);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Desk Depth:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(216, 179);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 17);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Desk Width:";
-            // 
-            // textDeskWidth
-            // 
-            this.textDeskWidth.AutoSize = true;
-            this.textDeskWidth.BackColor = System.Drawing.Color.Transparent;
-            this.textDeskWidth.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.textDeskWidth.Location = new System.Drawing.Point(321, 179);
-            this.textDeskWidth.Name = "textDeskWidth";
-            this.textDeskWidth.Size = new System.Drawing.Size(8, 17);
-            this.textDeskWidth.TabIndex = 23;
-            this.textDeskWidth.Text = "&";
-            // 
-            // textDeskDepth
-            // 
-            this.textDeskDepth.AutoSize = true;
-            this.textDeskDepth.BackColor = System.Drawing.Color.Transparent;
-            this.textDeskDepth.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.textDeskDepth.Location = new System.Drawing.Point(321, 205);
-            this.textDeskDepth.Name = "textDeskDepth";
-            this.textDeskDepth.Size = new System.Drawing.Size(8, 17);
-            this.textDeskDepth.TabIndex = 24;
-            this.textDeskDepth.Text = "&";
-            // 
-            // textNumberOfDrawers
-            // 
-            this.textNumberOfDrawers.AutoSize = true;
-            this.textNumberOfDrawers.BackColor = System.Drawing.Color.Transparent;
-            this.textNumberOfDrawers.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.textNumberOfDrawers.Location = new System.Drawing.Point(387, 231);
-            this.textNumberOfDrawers.Name = "textNumberOfDrawers";
-            this.textNumberOfDrawers.Size = new System.Drawing.Size(8, 17);
-            this.textNumberOfDrawers.TabIndex = 25;
-            this.textNumberOfDrawers.Text = "&";
-            // 
-            // textDesktopMaterial
-            // 
-            this.textDesktopMaterial.AutoSize = true;
-            this.textDesktopMaterial.BackColor = System.Drawing.Color.Transparent;
-            this.textDesktopMaterial.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.textDesktopMaterial.Location = new System.Drawing.Point(366, 257);
-            this.textDesktopMaterial.Name = "textDesktopMaterial";
-            this.textDesktopMaterial.Size = new System.Drawing.Size(8, 17);
-            this.textDesktopMaterial.TabIndex = 26;
-            this.textDesktopMaterial.Text = "&";
-            // 
-            // textRushOrder
-            // 
-            this.textRushOrder.AutoSize = true;
-            this.textRushOrder.BackColor = System.Drawing.Color.Transparent;
-            this.textRushOrder.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
-            this.textRushOrder.Location = new System.Drawing.Point(321, 284);
-            this.textRushOrder.Name = "textRushOrder";
-            this.textRushOrder.Size = new System.Drawing.Size(8, 17);
-            this.textRushOrder.TabIndex = 27;
-            this.textRushOrder.Text = "&";
-            // 
-            // textDeskQuote
-            // 
-            this.textDeskQuote.AutoSize = true;
-            this.textDeskQuote.BackColor = System.Drawing.Color.Transparent;
-            this.textDeskQuote.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.textDeskQuote.Location = new System.Drawing.Point(365, 95);
-            this.textDeskQuote.Name = "textDeskQuote";
-            this.textDeskQuote.Size = new System.Drawing.Size(9, 20);
-            this.textDeskQuote.TabIndex = 28;
-            this.textDeskQuote.Text = "&";
+            this.date.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(335, 348);
+            this.button1.Location = new System.Drawing.Point(557, 374);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 33);
             this.button1.TabIndex = 29;
@@ -213,27 +75,253 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.okBackToHome);
             // 
+            // customerLabel
+            // 
+            this.customerLabel.AutoSize = true;
+            this.customerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.customerLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
+            this.customerLabel.Location = new System.Drawing.Point(44, 52);
+            this.customerLabel.Name = "customerLabel";
+            this.customerLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.customerLabel.Size = new System.Drawing.Size(80, 17);
+            this.customerLabel.TabIndex = 30;
+            this.customerLabel.Text = "customer";
+            // 
+            // quoteLabel
+            // 
+            this.quoteLabel.BackColor = System.Drawing.Color.Peru;
+            this.quoteLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
+            this.quoteLabel.Location = new System.Drawing.Point(43, 98);
+            this.quoteLabel.Name = "quoteLabel";
+            this.quoteLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.quoteLabel.Size = new System.Drawing.Size(618, 30);
+            this.quoteLabel.TabIndex = 31;
+            this.quoteLabel.Text = "Quote";
+            this.quoteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // deskBasePriceLabel
+            // 
+            this.deskBasePriceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.deskBasePriceLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.deskBasePriceLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.deskBasePriceLabel.Location = new System.Drawing.Point(43, 128);
+            this.deskBasePriceLabel.Name = "deskBasePriceLabel";
+            this.deskBasePriceLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.deskBasePriceLabel.Size = new System.Drawing.Size(506, 30);
+            this.deskBasePriceLabel.TabIndex = 32;
+            this.deskBasePriceLabel.Text = "Desk Base Price";
+            this.deskBasePriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // deskBaseCostLabel
+            // 
+            this.deskBaseCostLabel.BackColor = System.Drawing.Color.Transparent;
+            this.deskBaseCostLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.deskBaseCostLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.deskBaseCostLabel.Location = new System.Drawing.Point(548, 128);
+            this.deskBaseCostLabel.Name = "deskBaseCostLabel";
+            this.deskBaseCostLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.deskBaseCostLabel.Size = new System.Drawing.Size(113, 30);
+            this.deskBaseCostLabel.TabIndex = 33;
+            this.deskBaseCostLabel.Text = "$200";
+            this.deskBaseCostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // totalSqInLabel
+            // 
+            this.totalSqInLabel.BackColor = System.Drawing.Color.Transparent;
+            this.totalSqInLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalSqInLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.totalSqInLabel.Location = new System.Drawing.Point(436, 158);
+            this.totalSqInLabel.Name = "totalSqInLabel";
+            this.totalSqInLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.totalSqInLabel.Size = new System.Drawing.Size(113, 30);
+            this.totalSqInLabel.TabIndex = 34;
+            this.totalSqInLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // SqInSurchargeLabel
+            // 
+            this.SqInSurchargeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SqInSurchargeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SqInSurchargeLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.SqInSurchargeLabel.Location = new System.Drawing.Point(548, 158);
+            this.SqInSurchargeLabel.Name = "SqInSurchargeLabel";
+            this.SqInSurchargeLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SqInSurchargeLabel.Size = new System.Drawing.Size(113, 30);
+            this.SqInSurchargeLabel.TabIndex = 35;
+            this.SqInSurchargeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // surfaceAreaLabel
+            // 
+            this.surfaceAreaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.surfaceAreaLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.surfaceAreaLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.surfaceAreaLabel.Location = new System.Drawing.Point(43, 158);
+            this.surfaceAreaLabel.Name = "surfaceAreaLabel";
+            this.surfaceAreaLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.surfaceAreaLabel.Size = new System.Drawing.Size(396, 30);
+            this.surfaceAreaLabel.TabIndex = 36;
+            this.surfaceAreaLabel.Text = "Surface Area Surcharge ($1 per sq in above 1000 sq in)";
+            this.surfaceAreaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.label11.Location = new System.Drawing.Point(43, 188);
+            this.label11.Name = "label11";
+            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label11.Size = new System.Drawing.Size(396, 30);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Drawers";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // totalDrawerCostLabel
+            // 
+            this.totalDrawerCostLabel.BackColor = System.Drawing.Color.Transparent;
+            this.totalDrawerCostLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalDrawerCostLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.totalDrawerCostLabel.Location = new System.Drawing.Point(548, 188);
+            this.totalDrawerCostLabel.Name = "totalDrawerCostLabel";
+            this.totalDrawerCostLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.totalDrawerCostLabel.Size = new System.Drawing.Size(113, 30);
+            this.totalDrawerCostLabel.TabIndex = 38;
+            this.totalDrawerCostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // totalDrawersLabel
+            // 
+            this.totalDrawersLabel.BackColor = System.Drawing.Color.Transparent;
+            this.totalDrawersLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalDrawersLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.totalDrawersLabel.Location = new System.Drawing.Point(436, 188);
+            this.totalDrawersLabel.Name = "totalDrawersLabel";
+            this.totalDrawersLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.totalDrawersLabel.Size = new System.Drawing.Size(113, 30);
+            this.totalDrawersLabel.TabIndex = 37;
+            this.totalDrawersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label14.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.label14.Location = new System.Drawing.Point(43, 218);
+            this.label14.Name = "label14";
+            this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label14.Size = new System.Drawing.Size(396, 30);
+            this.label14.TabIndex = 42;
+            this.label14.Text = "Surface Material";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // surfaceMaterialChargeLabel
+            // 
+            this.surfaceMaterialChargeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.surfaceMaterialChargeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.surfaceMaterialChargeLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.surfaceMaterialChargeLabel.Location = new System.Drawing.Point(548, 218);
+            this.surfaceMaterialChargeLabel.Name = "surfaceMaterialChargeLabel";
+            this.surfaceMaterialChargeLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.surfaceMaterialChargeLabel.Size = new System.Drawing.Size(113, 30);
+            this.surfaceMaterialChargeLabel.TabIndex = 41;
+            this.surfaceMaterialChargeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // surfaceMaterialLabel
+            // 
+            this.surfaceMaterialLabel.BackColor = System.Drawing.Color.Transparent;
+            this.surfaceMaterialLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.surfaceMaterialLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.surfaceMaterialLabel.Location = new System.Drawing.Point(436, 218);
+            this.surfaceMaterialLabel.Name = "surfaceMaterialLabel";
+            this.surfaceMaterialLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.surfaceMaterialLabel.Size = new System.Drawing.Size(113, 30);
+            this.surfaceMaterialLabel.TabIndex = 40;
+            this.surfaceMaterialLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label17.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.label17.Location = new System.Drawing.Point(43, 248);
+            this.label17.Name = "label17";
+            this.label17.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label17.Size = new System.Drawing.Size(396, 30);
+            this.label17.TabIndex = 45;
+            this.label17.Text = "Rush Order";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // orderSpeedCostLabel
+            // 
+            this.orderSpeedCostLabel.BackColor = System.Drawing.Color.Transparent;
+            this.orderSpeedCostLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.orderSpeedCostLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.orderSpeedCostLabel.Location = new System.Drawing.Point(548, 248);
+            this.orderSpeedCostLabel.Name = "orderSpeedCostLabel";
+            this.orderSpeedCostLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.orderSpeedCostLabel.Size = new System.Drawing.Size(113, 30);
+            this.orderSpeedCostLabel.TabIndex = 44;
+            this.orderSpeedCostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // orderSpeedLabel
+            // 
+            this.orderSpeedLabel.BackColor = System.Drawing.Color.Transparent;
+            this.orderSpeedLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.orderSpeedLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F);
+            this.orderSpeedLabel.Location = new System.Drawing.Point(436, 248);
+            this.orderSpeedLabel.Name = "orderSpeedLabel";
+            this.orderSpeedLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.orderSpeedLabel.Size = new System.Drawing.Size(113, 30);
+            this.orderSpeedLabel.TabIndex = 43;
+            this.orderSpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // deskTotalLabel
+            // 
+            this.deskTotalLabel.BackColor = System.Drawing.Color.Transparent;
+            this.deskTotalLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.deskTotalLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
+            this.deskTotalLabel.Location = new System.Drawing.Point(548, 278);
+            this.deskTotalLabel.Name = "deskTotalLabel";
+            this.deskTotalLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.deskTotalLabel.Size = new System.Drawing.Size(113, 30);
+            this.deskTotalLabel.TabIndex = 47;
+            this.deskTotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Peru;
+            this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(436, 278);
+            this.label9.Name = "label9";
+            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label9.Size = new System.Drawing.Size(113, 30);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Total";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = global::MegaDesk2.Properties.Resources.kelly_sikkema_dgVSuJu58C0_unsplash;
-            this.ClientSize = new System.Drawing.Size(636, 415);
+            this.ClientSize = new System.Drawing.Size(709, 415);
+            this.Controls.Add(this.deskTotalLabel);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.orderSpeedCostLabel);
+            this.Controls.Add(this.orderSpeedLabel);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.surfaceMaterialChargeLabel);
+            this.Controls.Add(this.surfaceMaterialLabel);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.totalDrawerCostLabel);
+            this.Controls.Add(this.totalDrawersLabel);
+            this.Controls.Add(this.surfaceAreaLabel);
+            this.Controls.Add(this.SqInSurchargeLabel);
+            this.Controls.Add(this.totalSqInLabel);
+            this.Controls.Add(this.deskBaseCostLabel);
+            this.Controls.Add(this.deskBasePriceLabel);
+            this.Controls.Add(this.quoteLabel);
+            this.Controls.Add(this.customerLabel);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textDeskQuote);
-            this.Controls.Add(this.textRushOrder);
-            this.Controls.Add(this.textDesktopMaterial);
-            this.Controls.Add(this.textNumberOfDrawers);
-            this.Controls.Add(this.textDeskDepth);
-            this.Controls.Add(this.textDeskWidth);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.date);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "DisplayQuote";
             this.Text = "DisplayQuote";
             this.ResumeLayout(false);
@@ -242,21 +330,25 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label date;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label textDeskWidth;
-        private System.Windows.Forms.Label textDeskDepth;
-        private System.Windows.Forms.Label textNumberOfDrawers;
-        private System.Windows.Forms.Label textDesktopMaterial;
-        private System.Windows.Forms.Label textRushOrder;
-        private System.Windows.Forms.Label textDeskQuote;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label customerLabel;
+        private System.Windows.Forms.Label quoteLabel;
+        private System.Windows.Forms.Label deskBasePriceLabel;
+        private System.Windows.Forms.Label deskBaseCostLabel;
+        private System.Windows.Forms.Label totalSqInLabel;
+        private System.Windows.Forms.Label SqInSurchargeLabel;
+        private System.Windows.Forms.Label surfaceAreaLabel;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label totalDrawerCostLabel;
+        private System.Windows.Forms.Label totalDrawersLabel;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label surfaceMaterialChargeLabel;
+        private System.Windows.Forms.Label surfaceMaterialLabel;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label orderSpeedCostLabel;
+        private System.Windows.Forms.Label orderSpeedLabel;
+        private System.Windows.Forms.Label deskTotalLabel;
+        private System.Windows.Forms.Label label9;
     }
 }
