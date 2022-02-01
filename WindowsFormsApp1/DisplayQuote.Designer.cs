@@ -217,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::MegaDesk2.Properties.Resources.kelly_sikkema_dgVSuJu58C0_unsplash;
+            //this.BackgroundImage = global::MegaDesk2.Properties.Resources.kelly_sikkema_dgVSuJu58C0_unsplash;
             this.ClientSize = new System.Drawing.Size(636, 415);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textDeskQuote);
