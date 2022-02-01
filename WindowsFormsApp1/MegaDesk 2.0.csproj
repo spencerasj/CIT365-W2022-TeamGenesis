@@ -83,6 +83,9 @@
     <Compile Include="ViewAllQuotes.Designer.cs">
       <DependentUpon>ViewAllQuotes.cs</DependentUpon>
     </Compile>
+    <Content Include="Data\rushOrderPrices.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="AddQuote.resx">
       <DependentUpon>AddQuote.cs</DependentUpon>
     </EmbeddedResource>
