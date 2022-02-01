@@ -58,7 +58,7 @@ namespace MegaDesk2
                 Desk desk = new Desk(width, depth,numberOfDrawers,surfaceType);
                 deskQuote.Desk = desk;
 
-                String jsonFromFile = File.ReadAllText(@"./quotes.json");
+                String jsonFromFile = File.ReadAllText(@"Data/quotes.json");
                 
                 if (!(String.IsNullOrEmpty(jsonFromFile)))
                 {
@@ -66,7 +66,7 @@ namespace MegaDesk2
                     deskQuotes.Add(deskQuote);
                     string json = JsonConvert.SerializeObject(deskQuotes, Formatting.Indented);
 
-                    File.WriteAllText(@"./quotes.json", json);
+                    File.WriteAllText(@"Data/quotes.json", json);
 
 
                 }
@@ -76,7 +76,7 @@ namespace MegaDesk2
                     deskQuotes.Add(deskQuote);
                     string json = JsonConvert.SerializeObject(deskQuotes, Formatting.Indented);
 
-                    File.WriteAllText(@"./quotes.json", json);
+                    File.WriteAllText(@"Data/quotes.json", json);
                 }
                 
        
