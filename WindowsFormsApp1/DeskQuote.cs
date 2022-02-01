@@ -93,24 +93,25 @@ namespace MegaDesk2
                 price += (surfaceArea - 100);
             }
             price += (desk.NumberOfDrawers * 50);
-            switch (desk.SurfaceMaterial)
-            {
-                case "Oak":
-                    price += 200;
-                    break;
-                case "Laminate":
-                    price += 100;
-                    break;
-                case "Pine":
-                    price += 50;
-                    break;
-                case "Rosewood":
-                    price += 300;
-                    break;
-                case "Veneer":
-                    price += 125;
-                    break;
-            }
+            price += (int)desk.SurfaceMaterial;
+            //switch (desk.SurfaceMaterial)
+            //{
+            //    case "Oak":
+            //        price += 200;
+            //        break;
+            //    case "Laminate":
+            //        price += 100;
+            //        break;
+            //    case "Pine":
+            //        price += 50;
+            //        break;
+            //    case "Rosewood":
+            //        price += 300;
+            //        break;
+            //    case "Veneer":
+            //        price += 125;
+            //        break;
+            //}
             if (rushDays > 0)
             {
                 price += rushOrderAdditionalCosts(surfaceArea);
