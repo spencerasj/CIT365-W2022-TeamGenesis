@@ -109,11 +109,14 @@ namespace MegaDesk2
             catch
             {
                 addQuoteButton.Click -= addQuote;
-                textDeskWidth.Focus();
-                errorProvider.SetError(textDeskWidth, "Please enter a number");
+                //textDeskWidth.Focus();
+                //errorProvider.SetError(textDeskWidth, "Please enter a number");
+                deskWidthErr.Text = "Please enter a number";
             }
         }
 
+        //
+        //Some of the error handling in here needs to be tweaked. numbers outside MIN and MAX are not grabbed.
         //Very messy but makes it so only a number, tab, backspace, and enter can be pressed. Then checks values if tab or enter are hit
         private void checkDepthValue(object sender, KeyPressEventArgs e)
         {
@@ -139,14 +142,16 @@ namespace MegaDesk2
                 catch 
                 {
                     addQuoteButton.Click -= addQuote;
-                    textDeskDepth.Focus();
-                    errorProvider.SetError(textDeskDepth, "Please enter a number");
+                    //textDeskDepth.Focus();
+                    //errorProvider.SetError(textDeskDepth, "Please enter a number");
+                    deskDepthErr.Text = "Please enter a number";
                 }
                
             }
             else
             {
-                errorProvider.SetError(textDeskDepth, "Please enter a number");
+                //errorProvider.SetError(textDeskDepth, "Please enter a number");
+                deskDepthErr.Text = "Please enter a number";
                 e.Handled = true;
             };
         }
@@ -159,15 +164,41 @@ namespace MegaDesk2
             {
                 //https://stackoverflow.com/questions/34284232/disable-click-button-event-c-sharp
                 addQuoteButton.Click -= addQuote;
-                textBox.Focus();
-                errorProvider.SetError(textBox, "Number needs to be between " + lowest + " and " + highest);
+                //textBox.Focus();
+                //errorProvider.SetError(textBox, "Number needs to be between " + lowest + " and " + highest);
+
+                //
+                //can i set these to individual error labels by passing the error message back and then setting its value from the calling method?
+                if (textBox.Name == "textDeskWidth")
+                {
+                    deskWidthErr.Text = "Number needs to be between " + lowest + " and " + highest;
+                }
+                else if (textBox.Name == "textDeskDepth")
+                {
+                    deskDepthErr.Text = "Number needs to be between " + lowest + " and " + highest;
+                } else if (textBox.Name == "textNumberOfDrawers")
+                {
+                    deskDrawerErr.Text = "Number needs to be between " + lowest + " and " + highest;
+                }
 
             }
             //If not sets an error and makes button not active
             else
             {
                 addQuoteButton.Click += addQuote;
-                errorProvider.SetError(textBox, null);
+                //errorProvider.SetError(textBox, null);
+                if (textBox.Name == "textDeskWidth")
+                {
+                    deskWidthErr.Text = "";
+                }
+                else if (textBox.Name == "textDeskDepth")
+                {
+                    deskDepthErr.Text = "";
+                }
+                else if (textBox.Name == "textNumberOfDrawers")
+                {
+                    deskDrawerErr.Text = "";
+                }
             }
 
         }
@@ -180,13 +211,15 @@ namespace MegaDesk2
                 int numberOfDrawers = Int32.Parse(textNumberOfDrawers.Text);
                 checkCorrectValue(numberOfDrawers, Desk.MINDRAWERS, Desk.MAXDRAWERS, textNumberOfDrawers);
                 addQuoteButton.Click += addQuote;
+                deskDrawerErr.Text = "";
 
             }
             catch
             {
                 addQuoteButton.Click -= addQuote;
-                textNumberOfDrawers.Focus();
-                errorProvider.SetError(textNumberOfDrawers, "Please enter a number");
+                //textNumberOfDrawers.Focus();
+                //errorProvider.SetError(textNumberOfDrawers, "Please enter a number");
+                deskDrawerErr.Text = "Please enter a number";
             }
         }
 
