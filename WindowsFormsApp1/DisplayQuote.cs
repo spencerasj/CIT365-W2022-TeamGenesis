@@ -44,7 +44,7 @@ namespace MegaDesk2
             }
 
             // DRAWERS
-            totalDrawersLabel.Text = drawers.ToString();
+            totalDrawersLabel.Text = "Qty: " + drawers.ToString();
             totalDrawerCostLabel.Text = "$" + (drawers * 50).ToString();
 
             // SURFACE
@@ -52,7 +52,7 @@ namespace MegaDesk2
             surfaceMaterialChargeLabel.Text = "$" + surfaceCharge.ToString();
 
             // RUSH
-            if (deskQuote.RushDays > 0)
+            if (deskQuote.RushDays < 14)
             {
                 orderSpeedLabel.Text = deskQuote.RushDays.ToString() + " days";
             }

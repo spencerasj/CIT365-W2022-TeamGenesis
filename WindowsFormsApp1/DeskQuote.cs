@@ -13,38 +13,7 @@ namespace MegaDesk2
         private int rushDays;
         private string customerName;
         private DateTime quoteDate;
-        public static Dictionary<int, int> LessThanThousand = new Dictionary<int, int>()
-        {
-            {3,60},
-            {5,40},
-            {7,30}
 
-        };
-        public static Dictionary<int, int> BetweenThousandAndTwoThousand = new Dictionary<int, int>()
-        {
-            {3,70},
-            {5,50},
-            {7,35}
-
-        };
-        public static Dictionary<int, int> OverTwoThousand = new Dictionary<int, int>()
-        {
-            {3, 80},
-            {5, 60},
-            {7, 40}
-
-        };
-        public static int[] rushOrderCost = { };
-
-        /*
-        public DeskQuote(Desk desk, string customerName, int rushDays)
-        {
-            this.desk = desk;
-            this.customerName = customerName;
-            this.rushDays = rushDays;
-            quoteDate = DateTime.Now;
-        }
-        */
         public DeskQuote()
         {
             quoteDate = DateTime.Now;
@@ -129,53 +98,19 @@ namespace MegaDesk2
 
         }
 
-        public int rushOrderAdditionalCosts()
-        {
-            int surfaceArea = desk.Width * desk.Depth;
-            int additionalRushOrderCost = 0;
-            if (surfaceArea < 1000)
-            {
-                additionalRushOrderCost += LessThanThousand[rushDays];
-            }
-            else if (surfaceArea > 1000 && surfaceArea < 2000)
-            {
-                additionalRushOrderCost += BetweenThousandAndTwoThousand[rushDays];
-            }
-            else
-            {
-                additionalRushOrderCost += OverTwoThousand[rushDays];
-            }
-            return additionalRushOrderCost;
-        }
 
         public int deskQuoteTotal()
         {
             int price = 200;
             int surfaceArea = desk.Width * desk.Depth;
+
             if(surfaceArea > 1000)
             {
                 price += (surfaceArea - 1000);
             }
             price += (desk.NumberOfDrawers * 50);
             price += (int)desk.SurfaceMaterial;
-            //switch (desk.SurfaceMaterial)
-            //{
-            //    case "Oak":
-            //        price += 200;
-            //        break;
-            //    case "Laminate":
-            //        price += 100;
-            //        break;
-            //    case "Pine":
-            //        price += 50;
-            //        break;
-            //    case "Rosewood":
-            //        price += 300;
-            //        break;
-            //    case "Veneer":
-            //        price += 125;
-            //        break;
-            //}
+
             if (rushDays < 14)
             {
                 price += rushOrderAdditionalCosts(surfaceArea);
