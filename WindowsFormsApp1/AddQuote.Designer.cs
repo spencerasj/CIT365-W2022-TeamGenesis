@@ -86,7 +86,7 @@
             // 
             // textDeskWidth
             // 
-            this.textDeskWidth.Location = new System.Drawing.Point(407, 104);
+            this.textDeskWidth.Location = new System.Drawing.Point(407, 111);
             this.textDeskWidth.Name = "textDeskWidth";
             this.textDeskWidth.Size = new System.Drawing.Size(121, 20);
             this.textDeskWidth.TabIndex = 3;
@@ -97,7 +97,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(255, 104);
+            this.label2.Location = new System.Drawing.Point(255, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 20);
             this.label2.TabIndex = 4;
@@ -108,7 +108,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(252, 147);
+            this.label3.Location = new System.Drawing.Point(252, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 20);
             this.label3.TabIndex = 6;
@@ -116,7 +116,7 @@
             // 
             // textDeskDepth
             // 
-            this.textDeskDepth.Location = new System.Drawing.Point(407, 147);
+            this.textDeskDepth.Location = new System.Drawing.Point(407, 161);
             this.textDeskDepth.Name = "textDeskDepth";
             this.textDeskDepth.Size = new System.Drawing.Size(121, 20);
             this.textDeskDepth.TabIndex = 5;
@@ -127,7 +127,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(214, 190);
+            this.label4.Location = new System.Drawing.Point(214, 211);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 20);
             this.label4.TabIndex = 8;
@@ -135,7 +135,7 @@
             // 
             // textNumberOfDrawers
             // 
-            this.textNumberOfDrawers.Location = new System.Drawing.Point(407, 190);
+            this.textNumberOfDrawers.Location = new System.Drawing.Point(407, 211);
             this.textNumberOfDrawers.Name = "textNumberOfDrawers";
             this.textNumberOfDrawers.Size = new System.Drawing.Size(121, 20);
             this.textNumberOfDrawers.TabIndex = 7;
@@ -151,7 +151,7 @@
             "Pine ",
             "Rosewood ",
             "Veneer"});
-            this.desktopMaterialDropDown.Location = new System.Drawing.Point(407, 233);
+            this.desktopMaterialDropDown.Location = new System.Drawing.Point(407, 261);
             this.desktopMaterialDropDown.Name = "desktopMaterialDropDown";
             this.desktopMaterialDropDown.Size = new System.Drawing.Size(121, 21);
             this.desktopMaterialDropDown.TabIndex = 9;
@@ -161,7 +161,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(238, 234);
+            this.label5.Location = new System.Drawing.Point(238, 262);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(160, 20);
             this.label5.TabIndex = 10;
@@ -176,7 +176,7 @@
             "5 ",
             "7 ",
             "14"});
-            this.rushOrderDropDown.Location = new System.Drawing.Point(407, 277);
+            this.rushOrderDropDown.Location = new System.Drawing.Point(407, 312);
             this.rushOrderDropDown.Name = "rushOrderDropDown";
             this.rushOrderDropDown.Size = new System.Drawing.Size(121, 21);
             this.rushOrderDropDown.TabIndex = 11;
@@ -186,7 +186,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(282, 278);
+            this.label6.Location = new System.Drawing.Point(282, 313);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 20);
             this.label6.TabIndex = 12;
@@ -214,30 +214,33 @@
             this.deskWidthErr.AutoSize = true;
             this.deskWidthErr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deskWidthErr.ForeColor = System.Drawing.Color.Maroon;
-            this.deskWidthErr.Location = new System.Drawing.Point(404, 84);
+            this.deskWidthErr.Location = new System.Drawing.Point(404, 91);
             this.deskWidthErr.Name = "deskWidthErr";
-            this.deskWidthErr.Size = new System.Drawing.Size(0, 17);
+            this.deskWidthErr.Size = new System.Drawing.Size(30, 17);
             this.deskWidthErr.TabIndex = 15;
+            this.deskWidthErr.Text = "text";
             // 
             // deskDepthErr
             // 
             this.deskDepthErr.AutoSize = true;
             this.deskDepthErr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deskDepthErr.ForeColor = System.Drawing.Color.Maroon;
-            this.deskDepthErr.Location = new System.Drawing.Point(404, 127);
+            this.deskDepthErr.Location = new System.Drawing.Point(404, 141);
             this.deskDepthErr.Name = "deskDepthErr";
-            this.deskDepthErr.Size = new System.Drawing.Size(0, 17);
+            this.deskDepthErr.Size = new System.Drawing.Size(30, 17);
             this.deskDepthErr.TabIndex = 16;
+            this.deskDepthErr.Text = "text";
             // 
             // deskDrawerErr
             // 
             this.deskDrawerErr.AutoSize = true;
             this.deskDrawerErr.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deskDrawerErr.ForeColor = System.Drawing.Color.Maroon;
-            this.deskDrawerErr.Location = new System.Drawing.Point(404, 170);
+            this.deskDrawerErr.Location = new System.Drawing.Point(404, 191);
             this.deskDrawerErr.Name = "deskDrawerErr";
-            this.deskDrawerErr.Size = new System.Drawing.Size(0, 17);
+            this.deskDrawerErr.Size = new System.Drawing.Size(30, 17);
             this.deskDrawerErr.TabIndex = 17;
+            this.deskDrawerErr.Text = "text";
             // 
             // backbtn
             // 
