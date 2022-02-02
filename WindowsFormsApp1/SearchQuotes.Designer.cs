@@ -43,12 +43,15 @@
             // 
             // buttonBackFromSearch
             // 
-            this.buttonBackFromSearch.Location = new System.Drawing.Point(199, 291);
+            this.buttonBackFromSearch.BackColor = System.Drawing.Color.Black;
+            this.buttonBackFromSearch.Font = new System.Drawing.Font("Lucida Sans Unicode", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBackFromSearch.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonBackFromSearch.Location = new System.Drawing.Point(458, 351);
             this.buttonBackFromSearch.Name = "buttonBackFromSearch";
-            this.buttonBackFromSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonBackFromSearch.Size = new System.Drawing.Size(239, 48);
             this.buttonBackFromSearch.TabIndex = 1;
             this.buttonBackFromSearch.Text = "Back";
-            this.buttonBackFromSearch.UseVisualStyleBackColor = true;
+            this.buttonBackFromSearch.UseVisualStyleBackColor = false;
             this.buttonBackFromSearch.Click += new System.EventHandler(this.goBackToMain);
             // 
             // label1
@@ -64,10 +67,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 351);
+            this.ClientSize = new System.Drawing.Size(709, 411);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBackFromSearch);
             this.Controls.Add(this.comboBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SearchQuotes";
             this.Text = "SearchQuotes";
             this.ResumeLayout(false);

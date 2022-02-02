@@ -53,7 +53,7 @@
             // date
             // 
             this.date.BackColor = System.Drawing.Color.Transparent;
-            this.date.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
+            this.date.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
             this.date.Location = new System.Drawing.Point(411, 52);
             this.date.Name = "date";
             this.date.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -65,13 +65,13 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(557, 374);
+            this.button1.Font = new System.Drawing.Font("Lucida Sans Unicode", 18.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(422, 351);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 33);
+            this.button1.Size = new System.Drawing.Size(239, 48);
             this.button1.TabIndex = 29;
-            this.button1.Text = "Ok";
+            this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.okBackToHome);
             // 
@@ -79,11 +79,11 @@
             // 
             this.customerLabel.AutoSize = true;
             this.customerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.customerLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
+            this.customerLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
             this.customerLabel.Location = new System.Drawing.Point(44, 52);
             this.customerLabel.Name = "customerLabel";
             this.customerLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.customerLabel.Size = new System.Drawing.Size(80, 17);
+            this.customerLabel.Size = new System.Drawing.Size(91, 20);
             this.customerLabel.TabIndex = 30;
             this.customerLabel.Text = "customer";
             // 
@@ -288,7 +288,7 @@
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Peru;
-            this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 10F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(436, 278);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -301,7 +301,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 415);
+            this.ClientSize = new System.Drawing.Size(709, 411);
+            this.ControlBox = false;
             this.Controls.Add(this.deskTotalLabel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label17);
@@ -322,6 +323,8 @@
             this.Controls.Add(this.customerLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.date);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DisplayQuote";
             this.Text = "DisplayQuote";
             this.ResumeLayout(false);

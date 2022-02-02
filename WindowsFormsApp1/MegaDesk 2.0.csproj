@@ -115,6 +115,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\MegaDesk2.AddQuote.datasource" />
+    <None Include="Properties\DataSources\MegaDesk2.Desk.datasource" />
+    <None Include="Properties\DataSources\MegaDesk2.DeskQuote.datasource" />
+    <None Include="Properties\DataSources\MegaDesk2.DisplayQuote.datasource" />
+    <None Include="Properties\DataSources\MegaDesk2.MainMenu.datasource" />
+    <None Include="Properties\DataSources\MegaDesk2.Program.datasource" />
+    <None Include="Properties\DataSources\MegaDesk2.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\MegaDesk2.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\MegaDesk2.SearchQuotes.datasource" />
+    <None Include="Properties\DataSources\MegaDesk2.ViewAllQuotes.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

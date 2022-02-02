@@ -224,5 +224,11 @@ namespace MegaDesk2
             }
         }
 
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            MainMenu viewmainMenu = (MainMenu)Tag;
+            viewmainMenu.Show();
+            Close();
+        }
     }
 }
