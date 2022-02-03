@@ -173,10 +173,10 @@
             this.rushOrderDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.rushOrderDropDown.FormattingEnabled = true;
             this.rushOrderDropDown.Items.AddRange(new object[] {
+            "14",
             "3 ",
             "5 ",
-            "7 ",
-            "14"});
+            "7 "});
             this.rushOrderDropDown.Location = new System.Drawing.Point(407, 312);
             this.rushOrderDropDown.Name = "rushOrderDropDown";
             this.rushOrderDropDown.Size = new System.Drawing.Size(121, 21);
