@@ -121,6 +121,7 @@
             this.textDeskDepth.Size = new System.Drawing.Size(121, 20);
             this.textDeskDepth.TabIndex = 5;
             this.textDeskDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkDepthValue);
+            this.textDeskDepth.Leave += new System.EventHandler(this.textDeskDepth_Leave);
             // 
             // label4
             // 
@@ -216,9 +217,8 @@
             this.deskWidthErr.ForeColor = System.Drawing.Color.Maroon;
             this.deskWidthErr.Location = new System.Drawing.Point(404, 91);
             this.deskWidthErr.Name = "deskWidthErr";
-            this.deskWidthErr.Size = new System.Drawing.Size(30, 17);
+            this.deskWidthErr.Size = new System.Drawing.Size(0, 17);
             this.deskWidthErr.TabIndex = 15;
-            this.deskWidthErr.Text = "text";
             // 
             // deskDepthErr
             // 
@@ -227,9 +227,8 @@
             this.deskDepthErr.ForeColor = System.Drawing.Color.Maroon;
             this.deskDepthErr.Location = new System.Drawing.Point(404, 141);
             this.deskDepthErr.Name = "deskDepthErr";
-            this.deskDepthErr.Size = new System.Drawing.Size(30, 17);
+            this.deskDepthErr.Size = new System.Drawing.Size(0, 17);
             this.deskDepthErr.TabIndex = 16;
-            this.deskDepthErr.Text = "text";
             // 
             // deskDrawerErr
             // 
@@ -238,9 +237,8 @@
             this.deskDrawerErr.ForeColor = System.Drawing.Color.Maroon;
             this.deskDrawerErr.Location = new System.Drawing.Point(404, 191);
             this.deskDrawerErr.Name = "deskDrawerErr";
-            this.deskDrawerErr.Size = new System.Drawing.Size(30, 17);
+            this.deskDrawerErr.Size = new System.Drawing.Size(0, 17);
             this.deskDrawerErr.TabIndex = 17;
-            this.deskDrawerErr.Text = "text";
             // 
             // backbtn
             // 

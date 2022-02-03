@@ -116,8 +116,22 @@ namespace MegaDesk2
         }
 
         //
-        //Some of the error handling in here needs to be tweaked. not picking up TAB press. Tried moving up in logic, but nothing happens when debugging.
         //Very messy but makes it so only a number, tab, backspace, and enter can be pressed. Then checks values if tab or enter are hit
+
+        private void textDeskDepth_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                int depth = Int32.Parse(textDeskDepth.Text);
+                checkCorrectValue(depth, Desk.MINDEPTH, Desk.MAXDEPTH, textDeskDepth);
+            }
+            catch
+            {
+                addQuoteButton.Click -= addQuote;
+                deskDepthErr.Text = "Please enter a number";
+            }
+        }
+
         private void checkDepthValue(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (Char)Keys.CapsLock)
@@ -131,8 +145,8 @@ namespace MegaDesk2
             else if(e.KeyChar == (Char)Keys.Back){
                 e.Handled = false;
             }
-            // Added in Enter key because wasn't picking up.
-            else if (e.KeyChar == (Char)Keys.Return || e.KeyChar == (Char)Keys.Tab || e.KeyChar == (Char)Keys.Enter)
+            // Moved to leave block to check any key that would cause focus to leave the textDeskDepth field.
+            /*else if (e.KeyChar == (Char)Keys.Return || e.KeyChar == (Char)Keys.Tab || e.KeyChar == (Char)Keys.Enter)
             {
                 e.Handled = false;
                 try
@@ -148,7 +162,7 @@ namespace MegaDesk2
                     deskDepthErr.Text = "Please enter a number";
                 }
 
-            }
+            }*/
             else
             {
                 //errorProvider.SetError(textDeskDepth, "Please enter a number");
@@ -212,7 +226,7 @@ namespace MegaDesk2
                 int numberOfDrawers = Int32.Parse(textNumberOfDrawers.Text);
                 checkCorrectValue(numberOfDrawers, Desk.MINDRAWERS, Desk.MAXDRAWERS, textNumberOfDrawers);
                 addQuoteButton.Click += addQuote;
-                deskDrawerErr.Text = "";
+                //deskDrawerErr.Text = "";
 
             }
             catch
@@ -230,5 +244,6 @@ namespace MegaDesk2
             viewmainMenu.Show();
             Close();
         }
+
     }
 }
