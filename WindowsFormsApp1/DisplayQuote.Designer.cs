@@ -57,7 +57,7 @@
             this.date.Location = new System.Drawing.Point(411, 52);
             this.date.Name = "date";
             this.date.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.date.Size = new System.Drawing.Size(250, 17);
+            this.date.Size = new System.Drawing.Size(250, 25);
             this.date.TabIndex = 2;
             this.date.Text = "date";
             this.date.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -77,13 +77,12 @@
             // 
             // customerLabel
             // 
-            this.customerLabel.AutoSize = true;
             this.customerLabel.BackColor = System.Drawing.Color.Transparent;
             this.customerLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold);
             this.customerLabel.Location = new System.Drawing.Point(44, 52);
             this.customerLabel.Name = "customerLabel";
             this.customerLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.customerLabel.Size = new System.Drawing.Size(91, 20);
+            this.customerLabel.Size = new System.Drawing.Size(250, 25);
             this.customerLabel.TabIndex = 30;
             this.customerLabel.Text = "customer";
             // 
@@ -328,7 +327,6 @@
             this.Name = "DisplayQuote";
             this.Text = "DisplayQuote";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
