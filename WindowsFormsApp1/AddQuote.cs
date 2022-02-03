@@ -20,7 +20,10 @@ namespace MegaDesk2
             InitializeComponent();
             //desktopMaterialDropDown.DataSource = Enum.GetValues(typeof(DesktopMaterial));
             InitSurfaceMaterials();
+
+            rushOrderDropDown.SelectedItem = "14";
         }
+
 
         private void InitSurfaceMaterials()
         {
