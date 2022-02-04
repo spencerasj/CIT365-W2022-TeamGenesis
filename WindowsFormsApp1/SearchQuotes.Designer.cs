@@ -28,18 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.searchBMT = new System.Windows.Forms.ComboBox();
             this.buttonBackFromSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.SearchDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // searchBMT
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(242, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.searchBMT.FormattingEnabled = true;
+            this.searchBMT.Location = new System.Drawing.Point(242, 12);
+            this.searchBMT.Name = "searchBMT";
+            this.searchBMT.Size = new System.Drawing.Size(121, 21);
+            this.searchBMT.TabIndex = 0;
+            this.searchBMT.SelectedValueChanged += new System.EventHandler(this.searchBMT_SelectedValueChanged);
             // 
             // buttonBackFromSearch
             // 
@@ -63,19 +70,55 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Search By Material Type";
             // 
+            // SearchDataGridView
+            // 
+            this.SearchDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SearchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SearchDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.SearchDataGridView.Location = new System.Drawing.Point(12, 39);
+            this.SearchDataGridView.Name = "SearchDataGridView";
+            this.SearchDataGridView.Size = new System.Drawing.Size(685, 306);
+            this.SearchDataGridView.TabIndex = 3;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Customer";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Date";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Material";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Quote Total";
+            this.Column4.Name = "Column4";
+            // 
             // SearchQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 411);
             this.ControlBox = false;
+            this.Controls.Add(this.SearchDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBackFromSearch);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.searchBMT);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SearchQuotes";
             this.Text = "SearchQuotes";
+            ((System.ComponentModel.ISupportInitialize)(this.SearchDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,8 +126,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox searchBMT;
         private System.Windows.Forms.Button buttonBackFromSearch;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView SearchDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
