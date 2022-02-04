@@ -1,0 +1,50 @@
+[
+  {
+    "CustomerName": "Bob Jones",
+    "RushDays": 14,
+    "QuoteDate": "2022-02-03T21:16:07.9538073-08:00",
+    "Desk": {
+      "Width": 48,
+      "Depth": 12,
+      "NumberOfDrawers": 3,
+      "SurfaceMaterial": 50
+    },
+    "QuoteTotal": 400
+  },
+  {
+    "CustomerName": "Mary Smith",
+    "RushDays": 3,
+    "QuoteDate": "2022-02-03T21:16:07.9538073-08:00",
+    "Desk": {
+      "Width": 60,
+      "Depth": 24,
+      "NumberOfDrawers": 5,
+      "SurfaceMaterial": 100
+    },
+    "QuoteTotal": 1060
+  },
+  {
+    "CustomerName": "Seth Green",
+    "RushDays": 5,
+    "QuoteDate": "2022-02-03T21:16:07.9538073-08:00",
+    "Desk": {
+      "Width": 36,
+      "Depth": 18,
+      "NumberOfDrawers": 1,
+      "SurfaceMaterial": 200
+    },
+    "QuoteTotal": 490
+  },
+  {
+    "CustomerName": "Count Dracula",
+    "RushDays": 7,
+    "QuoteDate": "2022-02-03T21:15:43.2516953-08:00",
+    "Desk": {
+      "Width": 63,
+      "Depth": 36,
+      "NumberOfDrawers": 2,
+      "SurfaceMaterial": 300
+    },
+    "QuoteTotal": 1908
+  }
+]
