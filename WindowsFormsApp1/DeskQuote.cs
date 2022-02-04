@@ -147,6 +147,7 @@ namespace MegaDesk2
         public DateTime QuoteDate
         {
             get { return quoteDate; }
+            set { quoteDate = value; }  
         }
 
         public Desk Desk
