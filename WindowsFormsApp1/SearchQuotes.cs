@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +28,9 @@ namespace MegaDesk2
             {
                 surfaces.Add(new KeyValuePair<string, string>(material.ToString(), ((int)material).ToString()));
             }
-            comboBox1.DataSource = surfaces;
-            comboBox1.DisplayMember = "Key";
-            comboBox1.ValueMember = "Value";
+            searchBMT.DataSource = surfaces;
+            searchBMT.DisplayMember = "Key";
+            searchBMT.ValueMember = "Value";
         }
 
         private void goBackToMain(object sender, EventArgs e)
@@ -36,6 +38,25 @@ namespace MegaDesk2
             MainMenu viewmainMenu = (MainMenu)Tag;
             viewmainMenu.Show();
             Close();
+        }
+
+        private void searchBMT_SelectedValueChanged(object sender, EventArgs e)
+        {
+            SearchDataGridView.Rows.Clear();
+            string SelectedMaterial = searchBMT.Text;
+            string jsonFromFile = File.ReadAllText(@"Data\quotes.json");
+
+            if (!(string.IsNullOrEmpty(jsonFromFile)))
+            {
+                List<DeskQuote> quoteRows = JsonConvert.DeserializeObject<List<DeskQuote>>(jsonFromFile);
+                foreach (var quote in quoteRows)
+                {
+                    string[] row = new string[] { quote.CustomerName, quote.QuoteDate.ToString(),quote.Desk.SurfaceMaterial.ToString(), quote.QuoteTotal.ToString() };
+                    if(quote.Desk.SurfaceMaterial.ToString() == SelectedMaterial) {
+                        SearchDataGridView.Rows.Add(row);
+                    }
+                }
+            }
         }
     }
 }
