@@ -60,6 +60,7 @@ namespace MegaDesk2
                 //Create desk object and send it to the deskquote
                 Desk desk = new Desk(width, depth,numberOfDrawers,surfaceType);
                 deskQuote.Desk = desk;
+                deskQuote.deskQuoteTotal();
 
                 String jsonFromFile = File.ReadAllText(@"Data/quotes.json");
                 

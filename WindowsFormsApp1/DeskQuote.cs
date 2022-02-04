@@ -13,6 +13,7 @@ namespace MegaDesk2
         private int rushDays;
         private string customerName;
         private DateTime quoteDate;
+        private int quoteTotal;
 
         public DeskQuote()
         {
@@ -115,6 +116,7 @@ namespace MegaDesk2
             {
                 price += rushOrderAdditionalCosts(surfaceArea);
             }
+            this.QuoteTotal = price;
             return price;
 
         }
@@ -151,6 +153,12 @@ namespace MegaDesk2
         {
             get { return desk; }
             set { desk = value; }
+        }
+
+        public int QuoteTotal
+        {
+            get { return quoteTotal; }
+            set { quoteTotal = value; }
         }
 
     }
