@@ -30,7 +30,8 @@ namespace MegaDesk2
         private int depth;
         private int numberOfDrawers;
         private DesktopMaterial surfaceMaterial;
-        
+
+        public Desk() {}
         public Desk(int width, int depth, int numberOfDrawers, DesktopMaterial surfaceMaterial)
         {
             this.width = width;
