@@ -67,9 +67,10 @@
             // 
             // textName
             // 
+            this.textName.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textName.Location = new System.Drawing.Point(407, 61);
             this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(121, 20);
+            this.textName.Size = new System.Drawing.Size(121, 27);
             this.textName.TabIndex = 1;
             // 
             // label1
@@ -86,9 +87,10 @@
             // 
             // textDeskWidth
             // 
+            this.textDeskWidth.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDeskWidth.Location = new System.Drawing.Point(407, 111);
             this.textDeskWidth.Name = "textDeskWidth";
-            this.textDeskWidth.Size = new System.Drawing.Size(121, 20);
+            this.textDeskWidth.Size = new System.Drawing.Size(121, 27);
             this.textDeskWidth.TabIndex = 3;
             this.textDeskWidth.Validating += new System.ComponentModel.CancelEventHandler(this.checkWidthValue);
             // 
@@ -116,9 +118,10 @@
             // 
             // textDeskDepth
             // 
+            this.textDeskDepth.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDeskDepth.Location = new System.Drawing.Point(407, 161);
             this.textDeskDepth.Name = "textDeskDepth";
-            this.textDeskDepth.Size = new System.Drawing.Size(121, 20);
+            this.textDeskDepth.Size = new System.Drawing.Size(121, 27);
             this.textDeskDepth.TabIndex = 5;
             this.textDeskDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkDepthValue);
             this.textDeskDepth.Leave += new System.EventHandler(this.textDeskDepth_Leave);
@@ -136,15 +139,17 @@
             // 
             // textNumberOfDrawers
             // 
+            this.textNumberOfDrawers.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNumberOfDrawers.Location = new System.Drawing.Point(407, 211);
             this.textNumberOfDrawers.Name = "textNumberOfDrawers";
-            this.textNumberOfDrawers.Size = new System.Drawing.Size(121, 20);
+            this.textNumberOfDrawers.Size = new System.Drawing.Size(121, 27);
             this.textNumberOfDrawers.TabIndex = 7;
             this.textNumberOfDrawers.Validating += new System.ComponentModel.CancelEventHandler(this.checkDrawerValue);
             // 
             // desktopMaterialDropDown
             // 
             this.desktopMaterialDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.desktopMaterialDropDown.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.desktopMaterialDropDown.FormattingEnabled = true;
             this.desktopMaterialDropDown.Items.AddRange(new object[] {
             "Oak ",
@@ -154,7 +159,7 @@
             "Veneer"});
             this.desktopMaterialDropDown.Location = new System.Drawing.Point(407, 261);
             this.desktopMaterialDropDown.Name = "desktopMaterialDropDown";
-            this.desktopMaterialDropDown.Size = new System.Drawing.Size(121, 21);
+            this.desktopMaterialDropDown.Size = new System.Drawing.Size(121, 24);
             this.desktopMaterialDropDown.TabIndex = 9;
             // 
             // label5
@@ -171,6 +176,7 @@
             // rushOrderDropDown
             // 
             this.rushOrderDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rushOrderDropDown.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rushOrderDropDown.FormattingEnabled = true;
             this.rushOrderDropDown.Items.AddRange(new object[] {
             "14",
@@ -179,7 +185,7 @@
             "7 "});
             this.rushOrderDropDown.Location = new System.Drawing.Point(407, 312);
             this.rushOrderDropDown.Name = "rushOrderDropDown";
-            this.rushOrderDropDown.Size = new System.Drawing.Size(121, 21);
+            this.rushOrderDropDown.Size = new System.Drawing.Size(121, 24);
             this.rushOrderDropDown.TabIndex = 11;
             // 
             // label6

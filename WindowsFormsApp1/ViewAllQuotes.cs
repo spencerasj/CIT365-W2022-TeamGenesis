@@ -30,7 +30,9 @@ namespace MegaDesk2
                 List<DeskQuote> quoteRows = JsonConvert.DeserializeObject<List<DeskQuote>>(jsonFromFile);
                 foreach (var quote in quoteRows)
                 {
-                    string[] row = new string[] { quote.CustomerName, quote.QuoteDate.ToString(), quote.Desk.SurfaceMaterial.ToString(), quote.QuoteTotal.ToString() };
+                    var date = quote.QuoteDate.ToString("MMM dd, yyyy");
+                    var price = $"${quote.QuoteTotal.ToString()}";
+                    string[] row = new string[] { quote.CustomerName, date, quote.Desk.SurfaceMaterial.ToString(), price };
 
                     dataGridView1.Rows.Add(row);
                 }
