@@ -18,7 +18,6 @@ namespace MegaDesk2
         public AddQuote()
         {
             InitializeComponent();
-            //desktopMaterialDropDown.DataSource = Enum.GetValues(typeof(DesktopMaterial));
             InitSurfaceMaterials();
 
             rushOrderDropDown.SelectedItem = "14";
@@ -28,18 +27,16 @@ namespace MegaDesk2
         private void InitSurfaceMaterials()
         {
             List<KeyValuePair<string, string>> surfaces = new List<KeyValuePair<string, string>>();
-            //List<DesktopMaterial> surfaces = new List<DesktopMaterial>();
             Array materials = Enum.GetValues(typeof(DesktopMaterial));
             foreach (DesktopMaterial material in materials)
             {
-            //    surfaces.Add(material);
              surfaces.Add(new KeyValuePair<string, string>(material.ToString(), ((int)material).ToString()));
             }
             desktopMaterialDropDown.DataSource = surfaces;
             desktopMaterialDropDown.DisplayMember = "Key";
             desktopMaterialDropDown.ValueMember = "Value";
         }
-            private void addQuote(object sender, EventArgs e)
+            private void AddNewQuote(object sender, EventArgs e)
         {
             //Before setting variables and going to next form make sure that the feilds are not empty
             if(!(textDeskWidth.Text == "" || textDeskDepth.Text == "" || textNumberOfDrawers.Text == "" || textName.Text== "" || rushOrderDropDown.SelectedItem == null || desktopMaterialDropDown.SelectedItem == null))
@@ -51,7 +48,6 @@ namespace MegaDesk2
                 int width = Int32.Parse(textDeskWidth.Text);
                 int depth = Int32.Parse(textDeskDepth.Text);
                 int numberOfDrawers = Int32.Parse(textNumberOfDrawers.Text);
-                //DesktopMaterial surfaceType = (DesktopMaterial)desktopMaterialDropDown.SelectedItem;
                 DesktopMaterial surfaceType = (DesktopMaterial)Enum.Parse(typeof(DesktopMaterial),
                     desktopMaterialDropDown.SelectedValue.ToString());
                 deskQuote.CustomerName = textName.Text;
@@ -60,7 +56,7 @@ namespace MegaDesk2
                 //Create desk object and send it to the deskquote
                 Desk desk = new Desk(width, depth,numberOfDrawers,surfaceType);
                 deskQuote.Desk = desk;
-                deskQuote.deskQuoteTotal();
+                deskQuote.DeskQuoteTotal();
 
                 String jsonFromFile = File.ReadAllText(@"Data/quotes.json");
                 
@@ -102,17 +98,17 @@ namespace MegaDesk2
 
         //https://www.youtube.com/watch?v=9Zs3Ls4odP0
         //Checks the value of the width using validating Event
-        private void checkWidthValue(object sender, CancelEventArgs e)
+        private void CheckWidthValue(object sender, CancelEventArgs e)
         {
             try
             {
                 int width = Int32.Parse(textDeskWidth.Text);
-                checkCorrectValue(width,Desk.MINWIDTH,Desk.MAXWIDTH, textDeskWidth);
-                addQuoteButton.Click += addQuote;
+                CheckCorrectValue(width,Desk.MINWIDTH,Desk.MAXWIDTH, textDeskWidth);
+                addQuoteButton.Click += AddNewQuote;
             }
             catch
             {
-                addQuoteButton.Click -= addQuote;
+                addQuoteButton.Click -= AddNewQuote;
                 //textDeskWidth.Focus();
                 //errorProvider.SetError(textDeskWidth, "Please enter a number");
                 deskWidthErr.Text = "Please enter a number";
@@ -122,21 +118,21 @@ namespace MegaDesk2
         //
         //Very messy but makes it so only a number, tab, backspace, and enter can be pressed. Then checks values if tab or enter are hit
 
-        private void textDeskDepth_Leave(object sender, EventArgs e)
+        private void TextDeskDepth_Leave(object sender, EventArgs e)
         {
             try
             {
                 int depth = Int32.Parse(textDeskDepth.Text);
-                checkCorrectValue(depth, Desk.MINDEPTH, Desk.MAXDEPTH, textDeskDepth);
+                CheckCorrectValue(depth, Desk.MINDEPTH, Desk.MAXDEPTH, textDeskDepth);
             }
             catch
             {
-                addQuoteButton.Click -= addQuote;
+                addQuoteButton.Click -= AddNewQuote;
                 deskDepthErr.Text = "Please enter a number";
             }
         }
 
-        private void checkDepthValue(object sender, KeyPressEventArgs e)
+        private void CheckDepthValue(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (Char)Keys.CapsLock)
             {
@@ -176,13 +172,13 @@ namespace MegaDesk2
         }
 
         //Code I was copy and pasting so made a method.  
-        private void checkCorrectValue(int value, int lowest, int highest, TextBox textBox)
+        private void CheckCorrectValue(int value, int lowest, int highest, TextBox textBox)
         {
             //Checks that numbers are within a certain range
             if (!(lowest <= value && highest >= value))
             {
                 //https://stackoverflow.com/questions/34284232/disable-click-button-event-c-sharp
-                addQuoteButton.Click -= addQuote;
+                addQuoteButton.Click -= AddNewQuote;
                 //textBox.Focus();
                 //errorProvider.SetError(textBox, "Number needs to be between " + lowest + " and " + highest);
 
@@ -204,7 +200,7 @@ namespace MegaDesk2
             //If not sets an error and makes button not active
             else
             {
-                addQuoteButton.Click += addQuote;
+                addQuoteButton.Click += AddNewQuote;
                 //errorProvider.SetError(textBox, null);
                 if (textBox.Name == "textDeskWidth")
                 {
@@ -223,26 +219,26 @@ namespace MegaDesk2
         }
 
         //Checks the value of drawers using validating Event
-        private void checkDrawerValue(object sender, CancelEventArgs e)
+        private void CheckDrawerValue(object sender, CancelEventArgs e)
         {
             try
             {
                 int numberOfDrawers = Int32.Parse(textNumberOfDrawers.Text);
-                checkCorrectValue(numberOfDrawers, Desk.MINDRAWERS, Desk.MAXDRAWERS, textNumberOfDrawers);
-                addQuoteButton.Click += addQuote;
+                CheckCorrectValue(numberOfDrawers, Desk.MINDRAWERS, Desk.MAXDRAWERS, textNumberOfDrawers);
+                addQuoteButton.Click += AddNewQuote;
                 //deskDrawerErr.Text = "";
 
             }
             catch
             {
-                addQuoteButton.Click -= addQuote;
+                addQuoteButton.Click -= AddNewQuote;
                 //textNumberOfDrawers.Focus();
                 //errorProvider.SetError(textNumberOfDrawers, "Please enter a number");
                 deskDrawerErr.Text = "Please enter a number";
             }
         }
 
-        private void backbtn_Click(object sender, EventArgs e)
+        private void Backbtn_Click(object sender, EventArgs e)
         {
             MainMenu viewmainMenu = (MainMenu)Tag;
             viewmainMenu.Show();

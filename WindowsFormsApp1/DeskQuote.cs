@@ -45,7 +45,7 @@ namespace MegaDesk2
             return rushOrder;
 
         }
-        public int rushOrderAdditionalCosts(int surfaceArea)
+        public int RushOrderAdditionalCosts(int surfaceArea)
         {
             Array rushOrder = GetRushOrder();
 
@@ -100,7 +100,7 @@ namespace MegaDesk2
         }
 
 
-        public int deskQuoteTotal()
+        public int DeskQuoteTotal()
         {
             int price = 200;
             int surfaceArea = desk.Width * desk.Depth;
@@ -114,7 +114,7 @@ namespace MegaDesk2
 
             if (rushDays < 14)
             {
-                price += rushOrderAdditionalCosts(surfaceArea);
+                price += RushOrderAdditionalCosts(surfaceArea);
             }
             this.QuoteTotal = price;
             return price;
@@ -139,7 +139,7 @@ namespace MegaDesk2
                     }
                     else
                     {
-                    throw (new Exception("Needs to be a Number  3, 5, 7 or 14"));
+                    throw new Exception("Needs to be a Number  3, 5, 7 or 14"); 
                     }
                 }
         }

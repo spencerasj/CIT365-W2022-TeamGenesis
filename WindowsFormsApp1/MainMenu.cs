@@ -17,7 +17,7 @@ namespace MegaDesk2
             InitializeComponent();
         }
 
-        private void openNewQuoteForm(object sender, EventArgs e)
+        private void OpenNewQuoteForm(object sender, EventArgs e)
         {
             AddQuote viewAddQuote = new AddQuote();
             viewAddQuote.Tag = this;
@@ -25,12 +25,12 @@ namespace MegaDesk2
             this.Hide();
         }
 
-        private void shutDown(object sender, EventArgs e)
+        private void ShutDown(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void openViewAllQuotesForm(object sender, EventArgs e)
+        private void OpenViewAllQuotesForm(object sender, EventArgs e)
         {
             ViewAllQuotes viewViewAllQuotes = new ViewAllQuotes();
             viewViewAllQuotes.Tag = this;
@@ -38,7 +38,7 @@ namespace MegaDesk2
             this.Hide();
         }
 
-        private void openSearchQuotesForm(object sender, EventArgs e)
+        private void OpenSearchQuotesForm(object sender, EventArgs e)
         {
             SearchQuotes viewSearchQuotes = new SearchQuotes();
             viewSearchQuotes.Tag = this;

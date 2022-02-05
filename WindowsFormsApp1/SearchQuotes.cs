@@ -33,14 +33,14 @@ namespace MegaDesk2
             searchBMT.ValueMember = "Value";
         }
 
-        private void goBackToMain(object sender, EventArgs e)
+        private void GoBackToMain(object sender, EventArgs e)
         {
             MainMenu viewmainMenu = (MainMenu)Tag;
             viewmainMenu.Show();
             Close();
         }
 
-        private void searchBMT_SelectedValueChanged(object sender, EventArgs e)
+        private void SearchBMT_SelectedValueChanged(object sender, EventArgs e)
         {
             SearchDataGridView.Rows.Clear();
             string SelectedMaterial = searchBMT.Text;

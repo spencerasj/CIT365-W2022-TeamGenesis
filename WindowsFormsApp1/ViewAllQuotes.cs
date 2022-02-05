@@ -37,7 +37,7 @@ namespace MegaDesk2
             }
         }
 
-        private void goBackToMain(object sender, EventArgs e)
+        private void GoBackToMain(object sender, EventArgs e)
         {
             MainMenu viewmainMenu = (MainMenu)Tag;
             viewmainMenu.Show();

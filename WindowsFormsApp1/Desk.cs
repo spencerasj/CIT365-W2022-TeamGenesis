@@ -45,7 +45,7 @@ namespace MegaDesk2
                 }
                 else
                 {
-                    throw (new Exception("Number cannot be less than "+MINWIDTH+" or greater than "+MAXWIDTH));
+                    throw new Exception("Number cannot be less than "+MINWIDTH+" or greater than "+MAXWIDTH);
                 } 
             }
         }
@@ -59,7 +59,7 @@ namespace MegaDesk2
                 }
                 else
                 {
-                    throw (new Exception("Number cannot be less than " + MINDEPTH + " or greater than " + MAXDEPTH));
+                    throw new Exception("Number cannot be less than " + MINDEPTH + " or greater than " + MAXDEPTH);
                 }
             }
         }
@@ -74,7 +74,7 @@ namespace MegaDesk2
                 }
                 else
                 {
-                    throw (new Exception("Number cannot be less than " + MINDRAWERS + " or greater than " + MAXDRAWERS));
+                    throw new Exception("Number cannot be less than " + MINDRAWERS + " or greater than " + MAXDRAWERS);
                 }
             }
         }

@@ -63,7 +63,7 @@ namespace MegaDesk2
             
             if(rush < 14)
             {
-                orderSpeedCostLabel.Text = "$" + deskQuote.rushOrderAdditionalCosts(surfaceArea).ToString();
+                orderSpeedCostLabel.Text = "$" + deskQuote.RushOrderAdditionalCosts(surfaceArea).ToString();
             }
             else
             {
@@ -71,7 +71,7 @@ namespace MegaDesk2
             }
 
             // TOTAL
-            deskTotalLabel.Text = "$" + deskQuote.deskQuoteTotal().ToString();
+            deskTotalLabel.Text = "$" + deskQuote.DeskQuoteTotal().ToString();
 
 
 
@@ -90,7 +90,7 @@ namespace MegaDesk2
             }*/ // EC
         }
 
-        private void okBackToHome(object sender, EventArgs e)
+        private void OkBackToHome(object sender, EventArgs e)
         {
             MainMenu viewmainMenu = (MainMenu)Tag;
             viewmainMenu.Show();
