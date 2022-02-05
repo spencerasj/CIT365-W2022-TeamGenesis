@@ -2,7 +2,7 @@
   {
     "CustomerName": "Bob Jones",
     "RushDays": 14,
-    "QuoteDate": "2022-02-03T21:16:07.9538073-08:00",
+    "QuoteDate": "2022-02-01T17:16:07.9538073-08:00",
     "Desk": {
       "Width": 48,
       "Depth": 12,
@@ -14,7 +14,7 @@
   {
     "CustomerName": "Mary Smith",
     "RushDays": 3,
-    "QuoteDate": "2022-02-03T21:16:07.9538073-08:00",
+    "QuoteDate": "2022-02-01T21:16:07.9538073-08:00",
     "Desk": {
       "Width": 60,
       "Depth": 24,
@@ -26,7 +26,7 @@
   {
     "CustomerName": "Seth Green",
     "RushDays": 5,
-    "QuoteDate": "2022-02-03T21:16:07.9538073-08:00",
+    "QuoteDate": "2022-02-02T21:16:07.9538073-08:00",
     "Desk": {
       "Width": 36,
       "Depth": 18,
