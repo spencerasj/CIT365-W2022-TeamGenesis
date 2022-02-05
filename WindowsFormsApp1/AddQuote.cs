@@ -36,7 +36,7 @@ namespace MegaDesk2
             desktopMaterialDropDown.DisplayMember = "Key";
             desktopMaterialDropDown.ValueMember = "Value";
         }
-            private void AddNewQuote(object sender, EventArgs e)
+        private void AddNewQuote(object sender, EventArgs e)
         {
             //Before setting variables and going to next form make sure that the feilds are not empty
             if(!(textDeskWidth.Text == "" || textDeskDepth.Text == "" || textNumberOfDrawers.Text == "" || textName.Text== "" || rushOrderDropDown.SelectedItem == null || desktopMaterialDropDown.SelectedItem == null))
@@ -58,28 +58,36 @@ namespace MegaDesk2
                 deskQuote.Desk = desk;
                 deskQuote.DeskQuoteTotal();
 
-                String jsonFromFile = File.ReadAllText(@"Data/quotes.json");
-                
-                if (!(String.IsNullOrEmpty(jsonFromFile)))
+                //This saves the object to a json file
+                try
                 {
-                    List<DeskQuote> deskQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(jsonFromFile);
-                    deskQuotes.Add(deskQuote);
-                    string json = JsonConvert.SerializeObject(deskQuotes, Formatting.Indented);
+                    String jsonFromFile = File.ReadAllText(@"Data/quotes.json");
+                
+                    if (!(String.IsNullOrEmpty(jsonFromFile)))
+                    {
+                        List<DeskQuote> deskQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(jsonFromFile);
+                        deskQuotes.Add(deskQuote);
+                        string json = JsonConvert.SerializeObject(deskQuotes, Formatting.Indented);
 
-                    File.WriteAllText(@"Data/quotes.json", json);
+                        File.WriteAllText(@"Data/quotes.json", json);
 
+
+                    }
+                    else
+                    {
+                        List <DeskQuote> deskQuotes = new List<DeskQuote>();
+                        deskQuotes.Add(deskQuote);
+                        string json = JsonConvert.SerializeObject(deskQuotes, Formatting.Indented);
+
+                        File.WriteAllText(@"Data/quotes.json", json);
+                    }
 
                 }
-                else
+                catch
                 {
-                    List <DeskQuote> deskQuotes = new List<DeskQuote>();
-                    deskQuotes.Add(deskQuote);
-                    string json = JsonConvert.SerializeObject(deskQuotes, Formatting.Indented);
-
-                    File.WriteAllText(@"Data/quotes.json", json);
+                    Console.WriteLine("ERROR: File could not be found");
+                    MessageBox.Show("ERROR: Quote could not be saved");
                 }
-                
-       
 
                 //Create new form and show it
                 DisplayQuote viewDisplayQuote = new DisplayQuote(deskQuote);
@@ -96,8 +104,7 @@ namespace MegaDesk2
             }
         }
 
-        //https://www.youtube.com/watch?v=9Zs3Ls4odP0
-        //Checks the value of the width using validating Event
+        //Checks the value of the width 
         private void CheckWidthValue(object sender, CancelEventArgs e)
         {
             try
@@ -109,13 +116,10 @@ namespace MegaDesk2
             catch
             {
                 addQuoteButton.Click -= AddNewQuote;
-                //textDeskWidth.Focus();
-                //errorProvider.SetError(textDeskWidth, "Please enter a number");
                 deskWidthErr.Text = "Please enter a number";
             }
         }
 
-        //
         //Very messy but makes it so only a number, tab, backspace, and enter can be pressed. Then checks values if tab or enter are hit
 
         private void TextDeskDepth_Leave(object sender, EventArgs e)
@@ -145,27 +149,8 @@ namespace MegaDesk2
             else if(e.KeyChar == (Char)Keys.Back){
                 e.Handled = false;
             }
-            // Moved to leave block to check any key that would cause focus to leave the textDeskDepth field.
-            /*else if (e.KeyChar == (Char)Keys.Return || e.KeyChar == (Char)Keys.Tab || e.KeyChar == (Char)Keys.Enter)
-            {
-                e.Handled = false;
-                try
-                {
-                    int depth = Int32.Parse(textDeskDepth.Text);
-                    checkCorrectValue(depth, Desk.MINDEPTH, Desk.MAXDEPTH, textDeskDepth);
-                }
-                catch
-                {
-                    addQuoteButton.Click -= addQuote;
-                    //textDeskDepth.Focus();
-                    //errorProvider.SetError(textDeskDepth, "Please enter a number");
-                    deskDepthErr.Text = "Please enter a number";
-                }
-
-            }*/
             else
             {
-                //errorProvider.SetError(textDeskDepth, "Please enter a number");
                 deskDepthErr.Text = "Please enter a number";
                 e.Handled = true;
             };
@@ -179,11 +164,7 @@ namespace MegaDesk2
             {
                 //https://stackoverflow.com/questions/34284232/disable-click-button-event-c-sharp
                 addQuoteButton.Click -= AddNewQuote;
-                //textBox.Focus();
-                //errorProvider.SetError(textBox, "Number needs to be between " + lowest + " and " + highest);
 
-                //
-                //can i set these to individual error labels by passing the error message back and then setting its value from the calling method?
                 if (textBox.Name == "textDeskWidth")
                 {
                     deskWidthErr.Text = "Number needs to be between " + lowest + " and " + highest;
@@ -201,7 +182,7 @@ namespace MegaDesk2
             else
             {
                 addQuoteButton.Click += AddNewQuote;
-                //errorProvider.SetError(textBox, null);
+
                 if (textBox.Name == "textDeskWidth")
                 {
                     deskWidthErr.Text = "";
@@ -226,14 +207,11 @@ namespace MegaDesk2
                 int numberOfDrawers = Int32.Parse(textNumberOfDrawers.Text);
                 CheckCorrectValue(numberOfDrawers, Desk.MINDRAWERS, Desk.MAXDRAWERS, textNumberOfDrawers);
                 addQuoteButton.Click += AddNewQuote;
-                //deskDrawerErr.Text = "";
 
             }
             catch
             {
                 addQuoteButton.Click -= AddNewQuote;
-                //textNumberOfDrawers.Focus();
-                //errorProvider.SetError(textNumberOfDrawers, "Please enter a number");
                 deskDrawerErr.Text = "Please enter a number";
             }
         }

@@ -44,20 +44,28 @@ namespace MegaDesk2
         {
             SearchDataGridView.Rows.Clear();
             string SelectedMaterial = searchBMT.Text;
-            string jsonFromFile = File.ReadAllText(@"Data\quotes.json");
 
-            if (!(string.IsNullOrEmpty(jsonFromFile)))
+            try
             {
-                List<DeskQuote> quoteRows = JsonConvert.DeserializeObject<List<DeskQuote>>(jsonFromFile);
-                foreach (var quote in quoteRows)
+                string jsonFromFile = File.ReadAllText(@"Data\quotes.json");
+
+                if (!(string.IsNullOrEmpty(jsonFromFile)))
                 {
-                    var date = quote.QuoteDate.ToString("MMM dd, yyyy");
-                    var price = $"${quote.QuoteTotal.ToString()}";
-                    string[] row = new string[] { quote.CustomerName, date, quote.Desk.SurfaceMaterial.ToString(), price };
-                    if(quote.Desk.SurfaceMaterial.ToString() == SelectedMaterial) {
-                        SearchDataGridView.Rows.Add(row);
+                    List<DeskQuote> quoteRows = JsonConvert.DeserializeObject<List<DeskQuote>>(jsonFromFile);
+                    foreach (var quote in quoteRows)
+                    {
+                        var date = quote.QuoteDate.ToString("MMM dd, yyyy");
+                        var price = $"${quote.QuoteTotal.ToString()}";
+                        string[] row = new string[] { quote.CustomerName, date, quote.Desk.SurfaceMaterial.ToString(), price };
+                        if(quote.Desk.SurfaceMaterial.ToString() == SelectedMaterial) {
+                            SearchDataGridView.Rows.Add(row);
+                        }
                     }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("No quotes found!");
             }
         }
     }

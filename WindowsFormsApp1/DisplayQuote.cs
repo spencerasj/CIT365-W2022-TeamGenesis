@@ -17,8 +17,6 @@ namespace MegaDesk2
         {
             this.deskQuote = deskQuote;
             InitializeComponent();
-            //textDeskDepth.Text = deskQuote.Desk.Depth.ToString() +" inches"; // EC
-            //textDeskWidth.Text = deskQuote.Desk.Width.ToString() + " inches"; // EC
 
             // new code for displayquote - EC
             int width = deskQuote.Desk.Width;
@@ -27,6 +25,9 @@ namespace MegaDesk2
             int drawers = deskQuote.Desk.NumberOfDrawers;
             int surfaceCharge = (int)deskQuote.Desk.SurfaceMaterial;
             int rush = deskQuote.RushDays;
+
+            customerLabel.Text = deskQuote.CustomerName.ToString();
+            date.Text = deskQuote.QuoteDate.ToString("MMMM dd, yyyy");
 
             // SURFACE AREA
             totalSqInLabel.Text = surfaceArea.ToString() + " sq in";
@@ -74,20 +75,6 @@ namespace MegaDesk2
             deskTotalLabel.Text = "$" + deskQuote.DeskQuoteTotal().ToString();
 
 
-
-            //textDesktopMaterial.Text = deskQuote.Desk.SurfaceMaterial.ToString(); // EC
-            //textNumberOfDrawers.Text = deskQuote.Desk.NumberOfDrawers.ToString(); // EC
-            //textDeskQuote.Text = "$"+deskQuote.deskQuoteTotal().ToString(); //EC
-            customerLabel.Text = deskQuote.CustomerName.ToString();
-            date.Text = deskQuote.QuoteDate.ToString("MMMM dd, yyyy");
-            /*if (deskQuote.RushDays > 0)
-            {
-                textRushOrder.Text = deskQuote.RushDays.ToString() + " days";
-            }
-            else
-            {
-                textRushOrder.Text = "None";
-            }*/ // EC
         }
 
         private void OkBackToHome(object sender, EventArgs e)
