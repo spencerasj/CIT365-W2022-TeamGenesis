@@ -26,7 +26,7 @@
   {
     "CustomerName": "Seth Green",
     "RushDays": 5,
-    "QuoteDate": "2022-02-02T21:16:07.9538073-08:00",
+    "QuoteDate": "2022-02-02T20:16:07.9538073-08:00",
     "Desk": {
       "Width": 36,
       "Depth": 18,
@@ -38,7 +38,7 @@
   {
     "CustomerName": "Count Dracula",
     "RushDays": 7,
-    "QuoteDate": "2022-02-03T21:15:43.2516953-08:00",
+    "QuoteDate": "2022-02-02T21:15:43.2516953-08:00",
     "Desk": {
       "Width": 63,
       "Depth": 36,
@@ -46,5 +46,53 @@
       "SurfaceMaterial": 300
     },
     "QuoteTotal": 1908
+  },
+  {
+    "CustomerName": "Queen Elizabeth",
+    "RushDays": 3,
+    "QuoteDate": "2022-02-03T12:16:47.4631163-08:00",
+    "Desk": {
+      "Width": 84,
+      "Depth": 24,
+      "NumberOfDrawers": 7,
+      "SurfaceMaterial": 300
+    },
+    "QuoteTotal": 1946
+  },
+  {
+    "CustomerName": "Doug Turner",
+    "RushDays": 14,
+    "QuoteDate": "2022-02-03T16:17:08.9659984-08:00",
+    "Desk": {
+      "Width": 36,
+      "Depth": 18,
+      "NumberOfDrawers": 2,
+      "SurfaceMaterial": 100
+    },
+    "QuoteTotal": 400
+  },
+  {
+    "CustomerName": "Minnie Mouse",
+    "RushDays": 5,
+    "QuoteDate": "2022-02-04T10:17:28.6898154-08:00",
+    "Desk": {
+      "Width": 24,
+      "Depth": 12,
+      "NumberOfDrawers": 1,
+      "SurfaceMaterial": 200
+    },
+    "QuoteTotal": 490
+  },
+  {
+    "CustomerName": "Bob Marley",
+    "RushDays": 7,
+    "QuoteDate": "2022-02-04T16:17:56.3391789-08:00",
+    "Desk": {
+      "Width": 28,
+      "Depth": 17,
+      "NumberOfDrawers": 6,
+      "SurfaceMaterial": 125
+    },
+    "QuoteTotal": 655
   }
 ]
