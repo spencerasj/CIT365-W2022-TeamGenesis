@@ -49,7 +49,7 @@
             this.searchBMT.Name = "searchBMT";
             this.searchBMT.Size = new System.Drawing.Size(121, 24);
             this.searchBMT.TabIndex = 0;
-            this.searchBMT.SelectedValueChanged += new System.EventHandler(this.searchBMT_SelectedValueChanged);
+            this.searchBMT.SelectedValueChanged += new System.EventHandler(this.SearchBMT_SelectedValueChanged);
             // 
             // buttonBackFromSearch
             // 
@@ -62,7 +62,7 @@
             this.buttonBackFromSearch.TabIndex = 1;
             this.buttonBackFromSearch.Text = "Back";
             this.buttonBackFromSearch.UseVisualStyleBackColor = false;
-            this.buttonBackFromSearch.Click += new System.EventHandler(this.goBackToMain);
+            this.buttonBackFromSearch.Click += new System.EventHandler(this.GoBackToMain);
             // 
             // label1
             // 

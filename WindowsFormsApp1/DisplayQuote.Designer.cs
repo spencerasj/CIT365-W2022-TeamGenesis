@@ -73,7 +73,7 @@
             this.button1.TabIndex = 29;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.okBackToHome);
+            this.button1.Click += new System.EventHandler(this.OkBackToHome);
             // 
             // customerLabel
             // 

@@ -63,7 +63,7 @@
             this.addQuoteButton.TabIndex = 12;
             this.addQuoteButton.Text = "Add Quote";
             this.addQuoteButton.UseVisualStyleBackColor = false;
-            this.addQuoteButton.Click += new System.EventHandler(this.addQuote);
+            this.addQuoteButton.Click += new System.EventHandler(this.AddNewQuote);
             // 
             // textName
             // 
@@ -92,7 +92,7 @@
             this.textDeskWidth.Name = "textDeskWidth";
             this.textDeskWidth.Size = new System.Drawing.Size(121, 27);
             this.textDeskWidth.TabIndex = 3;
-            this.textDeskWidth.Validating += new System.ComponentModel.CancelEventHandler(this.checkWidthValue);
+            this.textDeskWidth.Validating += new System.ComponentModel.CancelEventHandler(this.CheckWidthValue);
             // 
             // label2
             // 
@@ -123,8 +123,8 @@
             this.textDeskDepth.Name = "textDeskDepth";
             this.textDeskDepth.Size = new System.Drawing.Size(121, 27);
             this.textDeskDepth.TabIndex = 5;
-            this.textDeskDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkDepthValue);
-            this.textDeskDepth.Leave += new System.EventHandler(this.textDeskDepth_Leave);
+            this.textDeskDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckDepthValue);
+            this.textDeskDepth.Leave += new System.EventHandler(this.TextDeskDepth_Leave);
             // 
             // label4
             // 
@@ -144,7 +144,7 @@
             this.textNumberOfDrawers.Name = "textNumberOfDrawers";
             this.textNumberOfDrawers.Size = new System.Drawing.Size(121, 27);
             this.textNumberOfDrawers.TabIndex = 7;
-            this.textNumberOfDrawers.Validating += new System.ComponentModel.CancelEventHandler(this.checkDrawerValue);
+            this.textNumberOfDrawers.Validating += new System.ComponentModel.CancelEventHandler(this.CheckDrawerValue);
             // 
             // desktopMaterialDropDown
             // 
@@ -257,7 +257,7 @@
             this.backbtn.TabIndex = 18;
             this.backbtn.Text = "Back";
             this.backbtn.UseVisualStyleBackColor = false;
-            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
+            this.backbtn.Click += new System.EventHandler(this.Backbtn_Click);
             // 
             // AddQuote
             // 
