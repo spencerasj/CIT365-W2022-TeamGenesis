@@ -38,7 +38,7 @@ namespace MegaDesk2
         }
         private void AddNewQuote(object sender, EventArgs e)
         {
-            //Before setting variables and going to next form make sure that the feilds are not empty
+            //Before setting variables and going to next form make sure that the fields are not empty
             if(!(textDeskWidth.Text == "" || textDeskDepth.Text == "" || textNumberOfDrawers.Text == "" || textName.Text== "" || rushOrderDropDown.SelectedItem == null || desktopMaterialDropDown.SelectedItem == null))
             {
                 //Remove error message
@@ -110,8 +110,8 @@ namespace MegaDesk2
             try
             {
                 int width = Int32.Parse(textDeskWidth.Text);
-                CheckCorrectValue(width,Desk.MINWIDTH,Desk.MAXWIDTH, textDeskWidth);
                 addQuoteButton.Click += AddNewQuote;
+                CheckCorrectValue(width,Desk.MINWIDTH,Desk.MAXWIDTH, textDeskWidth);
             }
             catch
             {
@@ -127,6 +127,7 @@ namespace MegaDesk2
             try
             {
                 int depth = Int32.Parse(textDeskDepth.Text);
+                addQuoteButton.Click += AddNewQuote;
                 CheckCorrectValue(depth, Desk.MINDEPTH, Desk.MAXDEPTH, textDeskDepth);
             }
             catch
@@ -205,8 +206,9 @@ namespace MegaDesk2
             try
             {
                 int numberOfDrawers = Int32.Parse(textNumberOfDrawers.Text);
-                CheckCorrectValue(numberOfDrawers, Desk.MINDRAWERS, Desk.MAXDRAWERS, textNumberOfDrawers);
                 addQuoteButton.Click += AddNewQuote;
+                CheckCorrectValue(numberOfDrawers, Desk.MINDRAWERS, Desk.MAXDRAWERS, textNumberOfDrawers);
+              
 
             }
             catch

@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MegaDesk2
 {
-    //enum DesktopMaterial{ Oak, Laminate, Pine, Rosewood, Veneer };
+   
+
     public enum DesktopMaterial
     {
         Laminate = 100,
@@ -45,7 +47,7 @@ namespace MegaDesk2
                 }
                 else
                 {
-                    throw new Exception("Number cannot be less than "+MINWIDTH+" or greater than "+MAXWIDTH);
+                    throw new ValidationException("Number cannot be less than "+MINWIDTH+" or greater than "+MAXWIDTH);
                 } 
             }
         }
@@ -59,7 +61,7 @@ namespace MegaDesk2
                 }
                 else
                 {
-                    throw new Exception("Number cannot be less than " + MINDEPTH + " or greater than " + MAXDEPTH);
+                    throw new ValidationException("Number cannot be less than " + MINDEPTH + " or greater than " + MAXDEPTH);
                 }
             }
         }
@@ -74,7 +76,7 @@ namespace MegaDesk2
                 }
                 else
                 {
-                    throw new Exception("Number cannot be less than " + MINDRAWERS + " or greater than " + MAXDRAWERS);
+                    throw new ValidationException("Number cannot be less than " + MINDRAWERS + " or greater than " + MAXDRAWERS);
                 }
             }
         }

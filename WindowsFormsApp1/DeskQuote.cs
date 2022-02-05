@@ -139,7 +139,7 @@ namespace MegaDesk2
                     }
                     else
                     {
-                    throw new Exception("Needs to be a Number  3, 5, 7 or 14"); 
+                    throw new ValidationException("Needs to be a Number  3, 5, 7 or 14"); 
                     }
                 }
         }
